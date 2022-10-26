@@ -25,16 +25,17 @@ class _HomePage extends State<HomePage> {
       child: Stack(children: [
         Positioned(
           left: 0,
-          width: 1440.0,
+          right: 204.0,
           top: 0,
-          height: 110.0,
-          child: Container(
+          height: MediaQuery.of(context).size.height * 0.107,
+          child: Center(
+              child: Container(
             height: 110.0,
-            width: 1440.0,
+            width: MediaQuery.of(context).size.width * 1.0,
             decoration: BoxDecoration(
               color: Color(0xffeef07b),
             ),
-          ),
+          )),
         ),
         Positioned(
           left: 40.0,
@@ -80,15 +81,15 @@ class _HomePage extends State<HomePage> {
               ])),
         ),
         Positioned(
-          left: 688.0,
-          width: 746.0,
+          left: 534.0,
+          width: 750.0,
           top: 56.0,
           height: 49.0,
           child: Container(
               decoration: BoxDecoration(),
               child: Stack(children: [
                 Positioned(
-                  left: 0,
+                  left: 4.0,
                   width: 746.0,
                   top: 0,
                   height: 49.0,
@@ -101,46 +102,46 @@ class _HomePage extends State<HomePage> {
                   ),
                 ),
                 Positioned(
+                  left: 4.0,
+                  width: 157.0,
+                  top: 4.0,
+                  height: 45.0,
+                  child: Container(
+                    height: 45.0,
+                    width: 157.0,
+                    decoration: BoxDecoration(
+                      color: Color(0x00d9d9d9),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 101.0,
+                  width: 157.0,
+                  top: 4.0,
+                  height: 45.0,
+                  child: Container(
+                    height: 45.0,
+                    width: 157.0,
+                    decoration: BoxDecoration(
+                      color: Color(0x00d9d9d9),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 228.0,
+                  width: 157.0,
+                  top: 4.0,
+                  height: 45.0,
+                  child: Container(
+                    height: 45.0,
+                    width: 157.0,
+                    decoration: BoxDecoration(
+                      color: Color(0x00d9d9d9),
+                    ),
+                  ),
+                ),
+                Positioned(
                   left: 0,
-                  width: 157.0,
-                  top: 4.0,
-                  height: 45.0,
-                  child: Container(
-                    height: 45.0,
-                    width: 157.0,
-                    decoration: BoxDecoration(
-                      color: Color(0x00d9d9d9),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 157.0,
-                  width: 157.0,
-                  top: 4.0,
-                  height: 45.0,
-                  child: Container(
-                    height: 45.0,
-                    width: 157.0,
-                    decoration: BoxDecoration(
-                      color: Color(0x00d9d9d9),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 314.0,
-                  width: 157.0,
-                  top: 4.0,
-                  height: 45.0,
-                  child: Container(
-                    height: 45.0,
-                    width: 157.0,
-                    decoration: BoxDecoration(
-                      color: Color(0x00d9d9d9),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 15.0,
                   width: 57.0,
                   top: 12.0,
                   height: 24.0,
