@@ -25,17 +25,16 @@ class _HomePage extends State<HomePage> {
       child: Stack(children: [
         Positioned(
           left: 0,
-          right: 204.0,
+          right: 0,
           top: 0,
-          height: MediaQuery.of(context).size.height * 0.107,
-          child: Center(
-              child: Container(
-            height: 110.0,
+          height: 100.0,
+          child: Container(
+            height: 100.0,
             width: MediaQuery.of(context).size.width * 1.0,
             decoration: BoxDecoration(
               color: Color(0xffeef07b),
             ),
-          )),
+          ),
         ),
         Positioned(
           left: 40.0,
@@ -81,9 +80,9 @@ class _HomePage extends State<HomePage> {
               ])),
         ),
         Positioned(
-          left: 534.0,
+          left: 745.0,
           width: 750.0,
-          top: 56.0,
+          top: 46.0,
           height: 49.0,
           child: Container(
               decoration: BoxDecoration(),
@@ -115,7 +114,7 @@ class _HomePage extends State<HomePage> {
                   ),
                 ),
                 Positioned(
-                  left: 101.0,
+                  left: 136.0,
                   width: 157.0,
                   top: 4.0,
                   height: 45.0,
@@ -128,7 +127,7 @@ class _HomePage extends State<HomePage> {
                   ),
                 ),
                 Positioned(
-                  left: 228.0,
+                  left: 298.0,
                   width: 157.0,
                   top: 4.0,
                   height: 45.0,
@@ -161,6 +160,26 @@ class _HomePage extends State<HomePage> {
                       )),
                 ),
               ])),
+        ),
+        Positioned(
+          left: 556.0,
+          width: 110.0,
+          top: 384.0,
+          height: 24.0,
+          child: Container(
+              height: 24.0,
+              width: 110.0,
+              child: AutoSizeText(
+                'Home Page',
+                style: TextStyle(
+                  fontFamily: 'Inter',
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  letterSpacing: 0,
+                  color: Colors.black,
+                ),
+                textAlign: TextAlign.left,
+              )),
         ),
       ]),
     );
