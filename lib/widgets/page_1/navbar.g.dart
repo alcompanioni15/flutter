@@ -35,26 +35,26 @@ class _Navbar extends State<Navbar> {
         child: Stack(children: [
           Positioned(
             left: 0,
-            width: 1334.0,
+            right: 0,
             top: 0,
             height: 100.0,
             child: Stack(children: [
               Positioned(
                 left: 0,
-                width: 1334.0,
+                width: widget.constraints.maxWidth * 1.0,
                 top: 0,
                 height: 100.0,
                 child: Container(
                   height: 100.0,
-                  width: 1334.0,
+                  width: widget.constraints.maxWidth * 1.0,
                   decoration: BoxDecoration(
                     color: Color(0xffeef07b),
                   ),
                 ),
               ),
               Positioned(
-                left: 46.245,
-                width: 62.253,
+                left: widget.constraints.maxWidth * 0.035,
+                width: widget.constraints.maxWidth * 0.047,
                 top: 15.0,
                 height: 70.0,
                 child: Container(
@@ -71,7 +71,7 @@ class _Navbar extends State<Navbar> {
                               package: 'kadeca',
                               height: widget.constraints.maxHeight * 0.7,
                               width: widget.constraints.maxWidth *
-                                  0.046666684358016304,
+                                  0.04666667163320074,
                               fit: BoxFit.fill,
                             ),
                       ),
@@ -83,7 +83,7 @@ class _Navbar extends State<Navbar> {
                         child: Container(
                             height: widget.constraints.maxHeight * 0.48,
                             width: widget.constraints.maxWidth *
-                                0.015333321498430473,
+                                0.015333340286481038,
                             child: AutoSizeText(
                               widget.ovrL ?? 'L',
                               style: TextStyle(
@@ -99,8 +99,8 @@ class _Navbar extends State<Navbar> {
                     ])),
               ),
               Positioned(
-                left: 815.519,
-                width: 260.481,
+                left: widget.constraints.maxWidth * 0.611,
+                width: widget.constraints.maxWidth * 0.195,
                 top: 63.0,
                 height: 26.0,
                 child: Container(
@@ -114,7 +114,7 @@ class _Navbar extends State<Navbar> {
                         child: Container(
                             height: widget.constraints.maxHeight * 0.26,
                             width: widget.constraints.maxWidth *
-                                0.05579299583606634,
+                                0.05579299062048755,
                             child: AutoSizeText(
                               widget.ovrHome ?? 'Home',
                               style: TextStyle(
@@ -134,8 +134,8 @@ class _Navbar extends State<Navbar> {
                         height: widget.constraints.maxHeight * 0.26,
                         child: Container(
                             height: widget.constraints.maxHeight * 0.26,
-                            width:
-                                widget.constraints.maxWidth * 0.068215892053973,
+                            width: widget.constraints.maxWidth *
+                                0.06821588650930416,
                             child: AutoSizeText(
                               widget.ovrContact ?? 'Contact\n',
                               style: TextStyle(
