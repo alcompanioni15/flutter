@@ -6,6 +6,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:kadeca/widgets/page_1/navbar.g.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -25,144 +26,17 @@ class _HomePage extends State<HomePage> {
       child: Stack(children: [
         Positioned(
           left: 0,
-          right: 0,
+          width: 1334.0,
           top: 0,
           height: 100.0,
-          child: Container(
-            height: 100.0,
-            width: MediaQuery.of(context).size.width * 1.0,
-            decoration: BoxDecoration(
-              color: Color(0xffeef07b),
-            ),
-          ),
+          child: LayoutBuilder(builder: (context, constraints) {
+            return Navbar(
+              constraints,
+            );
+          }),
         ),
         Positioned(
-          left: 40.0,
-          width: 70.0,
-          top: 25.0,
-          height: 70.0,
-          child: Container(
-              decoration: BoxDecoration(),
-              child: Stack(children: [
-                Positioned(
-                  left: 0,
-                  width: 70.0,
-                  top: 0,
-                  height: 70.0,
-                  child: Image.asset(
-                    'assets/images/circle.png',
-                    package: 'kadeca',
-                    height: 70.0,
-                    width: 70.0,
-                    fit: BoxFit.none,
-                  ),
-                ),
-                Positioned(
-                  left: 23.0,
-                  width: 23.0,
-                  top: 11.0,
-                  height: 48.0,
-                  child: Container(
-                      height: 48.0,
-                      width: 23.0,
-                      child: AutoSizeText(
-                        'L',
-                        style: TextStyle(
-                          fontFamily: 'Inter',
-                          fontSize: 40,
-                          fontWeight: FontWeight.w500,
-                          letterSpacing: 0,
-                          color: Colors.white,
-                        ),
-                        textAlign: TextAlign.left,
-                      )),
-                ),
-              ])),
-        ),
-        Positioned(
-          left: 745.0,
-          width: 750.0,
-          top: 46.0,
-          height: 49.0,
-          child: Container(
-              decoration: BoxDecoration(),
-              child: Stack(children: [
-                Positioned(
-                  left: 4.0,
-                  width: 746.0,
-                  top: 0,
-                  height: 49.0,
-                  child: Container(
-                    height: 49.0,
-                    width: 746.0,
-                    decoration: BoxDecoration(
-                      color: Color(0x00d9d9d9),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 4.0,
-                  width: 157.0,
-                  top: 4.0,
-                  height: 45.0,
-                  child: Container(
-                    height: 45.0,
-                    width: 157.0,
-                    decoration: BoxDecoration(
-                      color: Color(0x00d9d9d9),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 136.0,
-                  width: 157.0,
-                  top: 4.0,
-                  height: 45.0,
-                  child: Container(
-                    height: 45.0,
-                    width: 157.0,
-                    decoration: BoxDecoration(
-                      color: Color(0x00d9d9d9),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 298.0,
-                  width: 157.0,
-                  top: 4.0,
-                  height: 45.0,
-                  child: Container(
-                    height: 45.0,
-                    width: 157.0,
-                    decoration: BoxDecoration(
-                      color: Color(0x00d9d9d9),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 0,
-                  width: 57.0,
-                  top: 12.0,
-                  height: 24.0,
-                  child: Container(
-                      height: 24.0,
-                      width: 57.0,
-                      child: AutoSizeText(
-                        'Home',
-                        style: TextStyle(
-                          fontFamily: 'Inter',
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          letterSpacing: 0,
-                          color: Colors.black,
-                        ),
-                        textAlign: TextAlign.left,
-                      )),
-                ),
-              ])),
-        ),
-        Positioned(
-          left: 556.0,
+          left: 501.0,
           width: 110.0,
           top: 384.0,
           height: 24.0,
