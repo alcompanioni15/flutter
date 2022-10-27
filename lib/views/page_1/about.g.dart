@@ -41,7 +41,6 @@ class _About extends State<About> {
                 fit: BoxFit.fill,
               ),
               ovrContact: 'Contact',
-              ovrHome: 'Home',
             );
           }),
         ),

@@ -6,20 +6,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:kadeca/widgets/page_1/custom/home_custom.dart';
 
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
   final String? ovrL;
   final Widget? ovrcircle;
   final String? ovrContact;
-  final String? ovrHome;
   const Navbar(
     this.constraints, {
     Key? key,
     this.ovrL,
     this.ovrcircle,
     this.ovrContact,
-    this.ovrHome,
   }) : super(key: key);
   @override
   _Navbar createState() => _Navbar();
@@ -111,21 +110,18 @@ class _Navbar extends State<Navbar> {
                         width: widget.constraints.maxWidth * 0.056,
                         top: 0,
                         height: widget.constraints.maxHeight * 0.26,
-                        child: Container(
-                            height: widget.constraints.maxHeight * 0.26,
-                            width: widget.constraints.maxWidth *
-                                0.05579299062048755,
+                        child: HomeCustom(
                             child: AutoSizeText(
-                              widget.ovrHome ?? 'Home',
-                              style: TextStyle(
-                                fontFamily: 'Inter',
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 0,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.left,
-                            )),
+                          'Home',
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            letterSpacing: 0,
+                            color: Colors.black,
+                          ),
+                          textAlign: TextAlign.left,
+                        )),
                       ),
                       Positioned(
                         left: widget.constraints.maxWidth * 0.127,
