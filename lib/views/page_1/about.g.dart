@@ -37,7 +37,7 @@ class _About extends State<About> {
                 'assets/images/circle.png',
                 package: 'kadeca',
                 height: MediaQuery.of(context).size.height * 0.0691699604743083,
-                width: MediaQuery.of(context).size.width * 0.04666662287462631,
+                width: MediaQuery.of(context).size.width * 0.04666664776850508,
                 fit: BoxFit.fill,
               ),
               ovrContact: 'Contact',
@@ -46,8 +46,8 @@ class _About extends State<About> {
           }),
         ),
         Positioned(
-          left: MediaQuery.of(context).size.width * 0.432,
-          width: MediaQuery.of(context).size.width * 0.058,
+          left: MediaQuery.of(context).size.width * 0.434,
+          width: MediaQuery.of(context).size.width * 0.056,
           top: MediaQuery.of(context).size.height * 0.443,
           height: MediaQuery.of(context).size.height * 0.024,
           child: Center(

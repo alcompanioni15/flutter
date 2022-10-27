@@ -26,7 +26,7 @@ class _HomePage extends State<HomePage> {
       child: Stack(children: [
         Positioned(
           left: 0,
-          width: 1334.0,
+          right: 0,
           top: 0,
           height: 100.0,
           child: LayoutBuilder(builder: (context, constraints) {
@@ -36,7 +36,7 @@ class _HomePage extends State<HomePage> {
           }),
         ),
         Positioned(
-          left: 501.0,
+          left: 438.0,
           width: 110.0,
           top: 384.0,
           height: 24.0,
