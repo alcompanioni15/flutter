@@ -32,7 +32,7 @@ class _ContactPage extends State<ContactPage> {
           child: LayoutBuilder(builder: (context, constraints) {
             return Navbar(
               constraints,
-              ovrContact: 'Contact',
+              ovrKadeca: 'Kadeca',
             );
           }),
         ),
