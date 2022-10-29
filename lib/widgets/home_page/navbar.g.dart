@@ -5,17 +5,17 @@
 // *********************************************************************************
 
 import 'package:flutter/material.dart';
-import 'package:kadeca/widgets/home_page/custom/kadeca_custom.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:kadeca/widgets/home_page/custom/home_custom.dart';
+import 'package:kadeca/widgets/home_page/custom/contact_custom.dart';
 
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
-  final String? ovrContact;
+  final String? ovrKadeca;
   const Navbar(
     this.constraints, {
     Key? key,
-    this.ovrContact,
+    this.ovrKadeca,
   }) : super(key: key);
   @override
   _Navbar createState() => _Navbar();
@@ -46,9 +46,8 @@ class _Navbar extends State<Navbar> {
                     child: Container(
                         height: 23.0,
                         width: 67.0,
-                        child: KadecaCustom(
-                            child: AutoSizeText(
-                          'Kadeca',
+                        child: AutoSizeText(
+                          widget.ovrKadeca ?? 'Kadeca',
                           style: TextStyle(
                             fontFamily: 'Roboto',
                             fontSize: 20,
@@ -57,7 +56,7 @@ class _Navbar extends State<Navbar> {
                             color: Colors.black,
                           ),
                           textAlign: TextAlign.left,
-                        )))),
+                        ))),
               ),
               Positioned(
                 right: 339.0,
@@ -82,20 +81,18 @@ class _Navbar extends State<Navbar> {
                 width: 53.0,
                 top: 19.0,
                 bottom: 19.0,
-                child: Container(
-                    height: widget.constraints.maxHeight * 0.32142857142857145,
-                    width: 53.0,
+                child: ContactCustom(
                     child: AutoSizeText(
-                      widget.ovrContact ?? 'Contact',
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 0,
-                        color: Colors.black,
-                      ),
-                      textAlign: TextAlign.left,
-                    )),
+                  'Contact',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0,
+                    color: Colors.black,
+                  ),
+                  textAlign: TextAlign.left,
+                )),
               ),
             ]),
           ),
