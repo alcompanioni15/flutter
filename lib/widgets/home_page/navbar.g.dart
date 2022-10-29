@@ -5,18 +5,16 @@
 // *********************************************************************************
 
 import 'package:flutter/material.dart';
+import 'package:kadeca/widgets/home_page/custom/kadeca_custom.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:kadeca/widgets/home_page/custom/home_custom.dart';
 
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
-  final String? ovrKadeca;
-  final String? ovrHome;
   final String? ovrContact;
   const Navbar(
     this.constraints, {
     Key? key,
-    this.ovrKadeca,
-    this.ovrHome,
     this.ovrContact,
   }) : super(key: key);
   @override
@@ -48,8 +46,9 @@ class _Navbar extends State<Navbar> {
                     child: Container(
                         height: 23.0,
                         width: 67.0,
-                        child: AutoSizeText(
-                          widget.ovrKadeca ?? 'Kadeca',
+                        child: KadecaCustom(
+                            child: AutoSizeText(
+                          'Kadeca',
                           style: TextStyle(
                             fontFamily: 'Roboto',
                             fontSize: 20,
@@ -58,27 +57,25 @@ class _Navbar extends State<Navbar> {
                             color: Colors.black,
                           ),
                           textAlign: TextAlign.left,
-                        ))),
+                        )))),
               ),
               Positioned(
                 right: 339.0,
                 width: 41.0,
                 top: 19.0,
                 bottom: 19.0,
-                child: Container(
-                    height: widget.constraints.maxHeight * 0.32142857142857145,
-                    width: 41.0,
+                child: HomeCustom(
                     child: AutoSizeText(
-                      widget.ovrHome ?? 'Home',
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 0,
-                        color: Colors.black,
-                      ),
-                      textAlign: TextAlign.left,
-                    )),
+                  'Home',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0,
+                    color: Colors.black,
+                  ),
+                  textAlign: TextAlign.left,
+                )),
               ),
               Positioned(
                 right: 249.0,
