@@ -40,15 +40,15 @@ class _ContactPage extends State<ContactPage> {
         ),
         Positioned(
           left: MediaQuery.of(context).size.width * 0.472,
-          width: MediaQuery.of(context).size.width * 0.055,
+          width: MediaQuery.of(context).size.width * 0.063,
           top: MediaQuery.of(context).size.height * 0.291,
           height: MediaQuery.of(context).size.height * 0.018,
           child: Center(
               child: Container(
                   height: 18.0,
-                  width: 79.0,
+                  width: 91.0,
                   child: AutoSizeText(
-                    'Home Page',
+                    'Contact Page',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 15,
