@@ -32,8 +32,6 @@ class _MainPage extends State<MainPage> {
           child: LayoutBuilder(builder: (context, constraints) {
             return Navbar(
               constraints,
-              ovrKadeca: 'Kadeca',
-              ovrHome: 'Home',
               ovrContact: 'Contact',
             );
           }),
