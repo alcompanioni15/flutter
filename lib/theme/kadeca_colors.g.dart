@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 class KadecaColors {
 
-static const Color primary = Color(0xffeef07b);
+static const Color primary = Color(0xff0091ea);
 
-static const Color secondary = Color(0xff164fe2);
+static const Color secondary = Color(0xff43a047);
 }

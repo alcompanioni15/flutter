@@ -10,9 +10,9 @@ class KadecaTextStyles {
 
 static const TextStyle header2 = TextStyle(
   fontSize: 20,
-  fontWeight: FontWeight.w500,
+  fontWeight: FontWeight.w600,
   letterSpacing: 0,
-  fontFamily: 'Inter',
+  fontFamily: 'Roboto',
   decoration: TextDecoration.none,
   fontStyle: FontStyle.normal,
 )
