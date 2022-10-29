@@ -40,15 +40,15 @@ class _MainPage extends State<MainPage> {
         ),
         Positioned(
           left: MediaQuery.of(context).size.width * 0.472,
-          width: MediaQuery.of(context).size.width * 0.063,
+          width: MediaQuery.of(context).size.width * 0.05,
           top: MediaQuery.of(context).size.height * 0.291,
           height: MediaQuery.of(context).size.height * 0.018,
           child: Center(
               child: Container(
                   height: 18.0,
-                  width: 91.0,
+                  width: 72.0,
                   child: AutoSizeText(
-                    'Contact Page',
+                    'Main Page',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 15,
