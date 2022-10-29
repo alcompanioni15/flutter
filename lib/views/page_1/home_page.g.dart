@@ -7,6 +7,7 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:kadeca/widgets/page_1/navbar.g.dart';
+import 'package:kadeca/widgets/page_1/contact_button.g.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -36,7 +37,7 @@ class _HomePage extends State<HomePage> {
           }),
         ),
         Positioned(
-          left: 438.0,
+          left: 523.0,
           width: 110.0,
           top: 384.0,
           height: 24.0,
@@ -54,6 +55,17 @@ class _HomePage extends State<HomePage> {
                 ),
                 textAlign: TextAlign.left,
               )),
+        ),
+        Positioned(
+          left: 836.0,
+          width: 269.0,
+          top: 313.0,
+          height: 47.0,
+          child: LayoutBuilder(builder: (context, constraints) {
+            return ContactButton(
+              constraints,
+            );
+          }),
         ),
       ]),
     );

@@ -70,7 +70,7 @@ class _Navbar extends State<Navbar> {
                               package: 'kadeca',
                               height: widget.constraints.maxHeight * 0.7,
                               width: widget.constraints.maxWidth *
-                                  0.04666667163320074,
+                                  0.046666652134486605,
                               fit: BoxFit.fill,
                             ),
                       ),
@@ -82,7 +82,7 @@ class _Navbar extends State<Navbar> {
                         child: Container(
                             height: widget.constraints.maxHeight * 0.48,
                             width: widget.constraints.maxWidth *
-                                0.015333340286481038,
+                                0.015333339146205356,
                             child: AutoSizeText(
                               widget.ovrL ?? 'L',
                               style: TextStyle(
@@ -98,8 +98,8 @@ class _Navbar extends State<Navbar> {
                     ])),
               ),
               Positioned(
-                left: widget.constraints.maxWidth * 0.611,
-                width: widget.constraints.maxWidth * 0.195,
+                left: widget.constraints.maxWidth * 0.599,
+                width: widget.constraints.maxWidth * 0.19,
                 top: 63.0,
                 height: 26.0,
                 child: Container(
@@ -124,14 +124,14 @@ class _Navbar extends State<Navbar> {
                         )),
                       ),
                       Positioned(
-                        left: widget.constraints.maxWidth * 0.127,
+                        left: widget.constraints.maxWidth * 0.122,
                         width: widget.constraints.maxWidth * 0.068,
                         top: 0,
                         height: widget.constraints.maxHeight * 0.26,
                         child: Container(
                             height: widget.constraints.maxHeight * 0.26,
                             width: widget.constraints.maxWidth *
-                                0.06821588650930416,
+                                0.06821589878627232,
                             child: AutoSizeText(
                               widget.ovrContact ?? 'Contact\n',
                               style: TextStyle(
