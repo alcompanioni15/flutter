@@ -26,9 +26,9 @@ class _MainPage extends State<MainPage> {
       child: Stack(children: [
         Positioned(
           left: 0,
-          width: MediaQuery.of(context).size.width * 1.0,
+          right: 0,
           top: 0,
-          bottom: 968.0,
+          height: 56.0,
           child: LayoutBuilder(builder: (context, constraints) {
             return Navbar(
               constraints,
