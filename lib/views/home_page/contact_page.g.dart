@@ -37,7 +37,7 @@ class _ContactPage extends State<ContactPage> {
           }),
         ),
         Positioned(
-          left: MediaQuery.of(context).size.width * 0.46,
+          left: MediaQuery.of(context).size.width * 0.454,
           width: MediaQuery.of(context).size.width * 0.091,
           top: MediaQuery.of(context).size.height * 0.291,
           height: MediaQuery.of(context).size.height * 0.018,

@@ -6,6 +6,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kadeca/widgets/home_page/menu_item/property1_active.g.dart';
+import 'package:kadeca/widgets/home_page/menu_item/property1_normal.g.dart';
 
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
@@ -74,8 +77,17 @@ class _Navbar extends State<Navbar> {
                             height: 18.0,
                             child:
                                 LayoutBuilder(builder: (context, constraints) {
-                              return Container(
-                                  /** This Symbol was not found **/);
+                              return Property1Active(
+                                constraints,
+                                ovrHome: 'Home',
+                                ovrLine1: SvgPicture.asset(
+                                  'assets/images/line1.svg',
+                                  package: 'kadeca',
+                                  height: 1.0,
+                                  width: 43.0,
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              );
                             }),
                           ),
                           Positioned(
@@ -85,8 +97,10 @@ class _Navbar extends State<Navbar> {
                             height: 18.0,
                             child:
                                 LayoutBuilder(builder: (context, constraints) {
-                              return Container(
-                                  /** This Symbol was not found **/);
+                              return Property1Normal(
+                                constraints,
+                                ovrHome: 'Contact',
+                              );
                             }),
                           ),
                           Positioned(
@@ -96,8 +110,10 @@ class _Navbar extends State<Navbar> {
                             height: 18.0,
                             child:
                                 LayoutBuilder(builder: (context, constraints) {
-                              return Container(
-                                  /** This Symbol was not found **/);
+                              return Property1Normal(
+                                constraints,
+                                ovrHome: 'About',
+                              );
                             }),
                           ),
                         ]))),
