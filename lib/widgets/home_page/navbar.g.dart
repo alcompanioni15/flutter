@@ -62,68 +62,65 @@ class _Navbar extends State<Navbar> {
                         ))),
               ),
               Positioned(
+                left: 569.0,
                 right: 27.0,
-                width: 404.0,
                 top: widget.constraints.maxHeight * 0.125,
                 height: widget.constraints.maxHeight * 0.75,
                 child: Center(
                     child: Container(
-                        padding: EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                          top: 12,
-                          bottom: 12,
-                        ),
-                        width: 404.0,
                         decoration: BoxDecoration(),
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                  height: 18.0,
-                                  width: 53.0,
-                                  child: LayoutBuilder(
-                                      builder: (context, constraints) {
-                                    return Property1Active(
-                                      constraints,
-                                      ovrHome: 'Home',
-                                      ovrLine1: SvgPicture.asset(
-                                        'assets/images/line1.svg',
-                                        package: 'kadeca',
-                                        height: 1.0,
-                                        width: 43.0,
-                                        fit: BoxFit.fitHeight,
-                                      ),
-                                    );
-                                  })),
-                              SizedBox(
-                                width: 60,
-                              ),
-                              Container(
-                                  height: 18.0,
-                                  width: 68.0,
-                                  child: LayoutBuilder(
-                                      builder: (context, constraints) {
-                                    return Property1Normal(
-                                      constraints,
-                                      ovrHome: 'Contact',
-                                    );
-                                  })),
-                              SizedBox(
-                                width: 60,
-                              ),
-                              Container(
-                                  height: 18.0,
-                                  width: 54.0,
-                                  child: LayoutBuilder(
-                                      builder: (context, constraints) {
-                                    return Property1Normal(
-                                      constraints,
-                                      ovrHome: 'About',
-                                    );
-                                  })),
-                            ]))),
+                        child: Stack(children: [
+                          Positioned(
+                            left: widget.constraints.maxWidth * 0.054,
+                            width: widget.constraints.maxWidth * 0.053,
+                            top: 12.0,
+                            height: 18.0,
+                            child: Center(
+                                child: Container(
+                                    height: 18.0,
+                                    width: 53.0,
+                                    child: LayoutBuilder(
+                                        builder: (context, constraints) {
+                                      return Property1Active(
+                                        constraints,
+                                        ovrHome: 'Home',
+                                        ovrLine1: SvgPicture.asset(
+                                          'assets/images/line1.svg',
+                                          package: 'kadeca',
+                                          height: 1.0,
+                                          width: 43.0,
+                                          fit: BoxFit.fitHeight,
+                                        ),
+                                      );
+                                    }))),
+                          ),
+                          Positioned(
+                            left: 167.5,
+                            width: 68.0,
+                            top: 12.0,
+                            height: 18.0,
+                            child:
+                                LayoutBuilder(builder: (context, constraints) {
+                              return Property1Normal(
+                                constraints,
+                                ovrHome: 'Contact',
+                              );
+                            }),
+                          ),
+                          Positioned(
+                            left: 295.5,
+                            width: 54.0,
+                            top: 12.0,
+                            height: 18.0,
+                            child:
+                                LayoutBuilder(builder: (context, constraints) {
+                              return Property1Normal(
+                                constraints,
+                                ovrHome: 'About',
+                              );
+                            }),
+                          ),
+                        ]))),
               ),
             ]),
           ),
