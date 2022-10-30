@@ -68,7 +68,7 @@ class _Property1Active extends State<Property1Active> {
                       package: 'kadeca',
                       height: 1.0,
                       width: 43.0,
-                      fit: BoxFit.fitHeight,
+                      fit: BoxFit.none,
                     ),
               ),
             ]),

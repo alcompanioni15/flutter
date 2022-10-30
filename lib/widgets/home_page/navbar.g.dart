@@ -75,8 +75,8 @@ class _Navbar extends State<Navbar> {
                         decoration: BoxDecoration(),
                         child: Stack(children: [
                           Positioned(
-                            left: 295.5,
-                            width: 44.0,
+                            left: 284.0,
+                            width: 63.0,
                             top: 12.0,
                             height: 18.0,
                             child:
@@ -88,8 +88,8 @@ class _Navbar extends State<Navbar> {
                             }),
                           ),
                           Positioned(
-                            left: 167.5,
-                            width: 58.0,
+                            left: 155.0,
+                            width: 62.0,
                             top: 12.0,
                             height: 18.0,
                             child:
@@ -101,7 +101,7 @@ class _Navbar extends State<Navbar> {
                             }),
                           ),
                           Positioned(
-                            left: 71.5,
+                            left: 44.0,
                             width: 43.0,
                             top: 12.0,
                             height: 18.0,
@@ -115,7 +115,7 @@ class _Navbar extends State<Navbar> {
                                   package: 'kadeca',
                                   height: 1.0,
                                   width: 43.0,
-                                  fit: BoxFit.fitHeight,
+                                  fit: BoxFit.none,
                                 ),
                               );
                             }),
