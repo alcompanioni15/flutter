@@ -13,16 +13,12 @@ import 'package:kadeca/widgets/home_page/menu_item/state_normal.g.dart';
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
   final String? ovrKadeca;
-  final Widget? ovrHome;
-  final Widget? ovrContact;
-  final Widget? ovrAbout;
+  final Widget? ovrMenuItem;
   const Navbar(
     this.constraints, {
     Key? key,
     this.ovrKadeca,
-    this.ovrHome,
-    this.ovrContact,
-    this.ovrAbout,
+    this.ovrMenuItem,
   }) : super(key: key);
   @override
   _Navbar createState() => _Navbar();
@@ -75,34 +71,8 @@ class _Navbar extends State<Navbar> {
                         decoration: BoxDecoration(),
                         child: Stack(children: [
                           Positioned(
-                            left: 284.0,
-                            width: 85.0,
-                            top: 12.0,
-                            height: 18.0,
-                            child:
-                                LayoutBuilder(builder: (context, constraints) {
-                              return StateNormal(
-                                constraints,
-                                ovrHome: 'About',
-                              );
-                            }),
-                          ),
-                          Positioned(
-                            left: 164.0,
-                            width: 85.0,
-                            top: 12.0,
-                            height: 18.0,
-                            child:
-                                LayoutBuilder(builder: (context, constraints) {
-                              return StateNormal(
-                                constraints,
-                                ovrHome: 'Contact',
-                              );
-                            }),
-                          ),
-                          Positioned(
-                            left: 44.0,
-                            width: 85.0,
+                            left: 29.0,
+                            width: 80.0,
                             top: 12.0,
                             height: 18.0,
                             child:
@@ -117,6 +87,32 @@ class _Navbar extends State<Navbar> {
                                   width: 43.0,
                                   fit: BoxFit.none,
                                 ),
+                              );
+                            }),
+                          ),
+                          Positioned(
+                            left: 174.0,
+                            right: 174.0,
+                            top: 12.0,
+                            height: 18.0,
+                            child:
+                                LayoutBuilder(builder: (context, constraints) {
+                              return StateNormal(
+                                constraints,
+                                ovrHome: 'Contact',
+                              );
+                            }),
+                          ),
+                          Positioned(
+                            left: 319.0,
+                            right: 29.0,
+                            top: 12.0,
+                            height: 18.0,
+                            child:
+                                LayoutBuilder(builder: (context, constraints) {
+                              return StateNormal(
+                                constraints,
+                                ovrHome: 'About',
                               );
                             }),
                           ),
