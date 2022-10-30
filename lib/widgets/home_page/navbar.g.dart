@@ -6,17 +6,16 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:kadeca/widgets/home_page/custom/about_custom.dart';
-import 'package:kadeca/widgets/home_page/custom/contact_custom.dart';
-import 'package:kadeca/widgets/home_page/custom/home_custom.dart';
 
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
   final String? ovrKadeca;
+  final Widget? ovrMenuItem;
   const Navbar(
     this.constraints, {
     Key? key,
     this.ovrKadeca,
+    this.ovrMenuItem,
   }) : super(key: key);
   @override
   _Navbar createState() => _Navbar();
@@ -69,58 +68,37 @@ class _Navbar extends State<Navbar> {
                         decoration: BoxDecoration(),
                         child: Stack(children: [
                           Positioned(
-                            right: 2.0,
-                            width: 77.0,
-                            top: 11.0,
-                            height: 18.0,
-                            child: AboutCustom(
-                                child: AutoSizeText(
-                              'About',
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                                letterSpacing: 0,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.left,
-                            )),
+                            left: 13.0,
+                            width: 80.0,
+                            top: 10.0,
+                            height: 20.0,
+                            child:
+                                LayoutBuilder(builder: (context, constraints) {
+                              return Container(
+                                  /** This Symbol was not found **/);
+                            }),
                           ),
                           Positioned(
-                            right: 134.0,
-                            width: 77.0,
-                            top: 11.0,
-                            height: 18.0,
-                            child: ContactCustom(
-                                child: AutoSizeText(
-                              'Contact',
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                                letterSpacing: 0,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.left,
-                            )),
+                            left: 122.0,
+                            width: 80.0,
+                            top: 10.0,
+                            height: 20.0,
+                            child:
+                                LayoutBuilder(builder: (context, constraints) {
+                              return Container(
+                                  /** This Symbol was not found **/);
+                            }),
                           ),
                           Positioned(
-                            right: 266.0,
-                            width: 77.0,
-                            top: 11.0,
-                            height: 18.0,
-                            child: HomeCustom(
-                                child: AutoSizeText(
-                              'Home',
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                                letterSpacing: 0,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.left,
-                            )),
+                            left: 241.0,
+                            width: 80.0,
+                            top: 10.0,
+                            height: 20.0,
+                            child:
+                                LayoutBuilder(builder: (context, constraints) {
+                              return Container(
+                                  /** This Symbol was not found **/);
+                            }),
                           ),
                         ]))),
               ),
