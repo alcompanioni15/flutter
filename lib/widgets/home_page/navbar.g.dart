@@ -60,81 +60,69 @@ class _Navbar extends State<Navbar> {
                         ))),
               ),
               Positioned(
-                left: 1043.0,
+                right: 54.0,
                 width: 343.0,
-                top: 8.0,
-                height: 40.0,
-                child: Container(
-                    decoration: BoxDecoration(),
-                    child: Stack(children: [
-                      Positioned(
-                        right: 0,
-                        width: 343.0,
-                        top: 0,
-                        height: 40.0,
-                        child: Container(
-                          height: 40.0,
-                          width: 343.0,
-                          decoration: BoxDecoration(
-                            color: Color(0x00d9d9d9),
+                top: widget.constraints.maxHeight * 0.143,
+                height: widget.constraints.maxHeight * 0.714,
+                child: Center(
+                    child: Container(
+                        decoration: BoxDecoration(),
+                        child: Stack(children: [
+                          Positioned(
+                            right: 2.0,
+                            width: 77.0,
+                            top: 11.0,
+                            height: 18.0,
+                            child: AboutCustom(
+                                child: AutoSizeText(
+                              'About',
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 0,
+                                color: Colors.black,
+                              ),
+                              textAlign: TextAlign.left,
+                            )),
                           ),
-                        ),
-                      ),
-                      Positioned(
-                        right: 2.0,
-                        width: 77.0,
-                        top: 11.0,
-                        height: 18.0,
-                        child: AboutCustom(
-                            child: AutoSizeText(
-                          'About',
-                          style: TextStyle(
-                            fontFamily: 'Roboto',
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                            letterSpacing: 0,
-                            color: Colors.black,
+                          Positioned(
+                            right: 134.0,
+                            width: 77.0,
+                            top: 11.0,
+                            height: 18.0,
+                            child: ContactCustom(
+                                child: AutoSizeText(
+                              'Contact',
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 0,
+                                color: Colors.black,
+                              ),
+                              textAlign: TextAlign.left,
+                            )),
                           ),
-                          textAlign: TextAlign.left,
-                        )),
-                      ),
-                      Positioned(
-                        right: 134.0,
-                        width: 77.0,
-                        top: 11.0,
-                        height: 18.0,
-                        child: ContactCustom(
-                            child: AutoSizeText(
-                          'Contact',
-                          style: TextStyle(
-                            fontFamily: 'Roboto',
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                            letterSpacing: 0,
-                            color: Colors.black,
+                          Positioned(
+                            right: 266.0,
+                            width: 77.0,
+                            top: 11.0,
+                            height: 18.0,
+                            child: HomeCustom(
+                                child: AutoSizeText(
+                              'Home',
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 0,
+                                color: Colors.black,
+                              ),
+                              textAlign: TextAlign.left,
+                            )),
                           ),
-                          textAlign: TextAlign.left,
-                        )),
-                      ),
-                      Positioned(
-                        right: 266.0,
-                        width: 77.0,
-                        top: 11.0,
-                        height: 18.0,
-                        child: HomeCustom(
-                            child: AutoSizeText(
-                          'Home',
-                          style: TextStyle(
-                            fontFamily: 'Roboto',
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                            letterSpacing: 0,
-                            color: Colors.black,
-                          ),
-                          textAlign: TextAlign.left,
-                        )),
-                      ),
-                    ])),
+                        ]))),
               ),
             ]),
           ),
