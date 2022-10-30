@@ -76,7 +76,7 @@ class _Navbar extends State<Navbar> {
                         child: Stack(children: [
                           Positioned(
                             left: 284.0,
-                            width: 63.0,
+                            width: 85.0,
                             top: 12.0,
                             height: 18.0,
                             child:
@@ -88,8 +88,8 @@ class _Navbar extends State<Navbar> {
                             }),
                           ),
                           Positioned(
-                            left: 155.0,
-                            width: 62.0,
+                            left: 164.0,
+                            width: 85.0,
                             top: 12.0,
                             height: 18.0,
                             child:
@@ -102,7 +102,7 @@ class _Navbar extends State<Navbar> {
                           ),
                           Positioned(
                             left: 44.0,
-                            width: 43.0,
+                            width: 85.0,
                             top: 12.0,
                             height: 18.0,
                             child:
