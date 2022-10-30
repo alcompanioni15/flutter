@@ -59,19 +59,19 @@ class _Navbar extends State<Navbar> {
                         ))),
               ),
               Positioned(
-                right: 54.0,
+                right: 67.0,
                 width: 343.0,
                 top: widget.constraints.maxHeight * 0.143,
-                height: widget.constraints.maxHeight * 0.714,
+                height: widget.constraints.maxHeight * 0.732,
                 child: Center(
                     child: Container(
                         decoration: BoxDecoration(),
                         child: Stack(children: [
                           Positioned(
-                            left: 13.0,
-                            width: 80.0,
-                            top: 10.0,
-                            height: 20.0,
+                            left: 23.0,
+                            width: 53.0,
+                            top: 11.0,
+                            height: 18.0,
                             child:
                                 LayoutBuilder(builder: (context, constraints) {
                               return Container(
@@ -79,10 +79,10 @@ class _Navbar extends State<Navbar> {
                             }),
                           ),
                           Positioned(
-                            left: 122.0,
-                            width: 80.0,
-                            top: 10.0,
-                            height: 20.0,
+                            left: 134.0,
+                            width: 68.0,
+                            top: 11.0,
+                            height: 18.0,
                             child:
                                 LayoutBuilder(builder: (context, constraints) {
                               return Container(
@@ -90,10 +90,10 @@ class _Navbar extends State<Navbar> {
                             }),
                           ),
                           Positioned(
-                            left: 241.0,
-                            width: 80.0,
-                            top: 10.0,
-                            height: 20.0,
+                            left: 248.0,
+                            width: 54.0,
+                            top: 11.0,
+                            height: 18.0,
                             child:
                                 LayoutBuilder(builder: (context, constraints) {
                               return Container(

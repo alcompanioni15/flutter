@@ -28,7 +28,7 @@ class _ContactPage extends State<ContactPage> {
           left: 0,
           right: 0,
           top: 0,
-          height: 56.0,
+          height: 55.0,
           child: LayoutBuilder(builder: (context, constraints) {
             return Navbar(
               constraints,
@@ -37,8 +37,8 @@ class _ContactPage extends State<ContactPage> {
           }),
         ),
         Positioned(
-          left: MediaQuery.of(context).size.width * 0.472,
-          width: MediaQuery.of(context).size.width * 0.063,
+          left: MediaQuery.of(context).size.width * 0.46,
+          width: MediaQuery.of(context).size.width * 0.091,
           top: MediaQuery.of(context).size.height * 0.291,
           height: MediaQuery.of(context).size.height * 0.018,
           child: Center(

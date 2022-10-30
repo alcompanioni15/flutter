@@ -37,8 +37,8 @@ class _MainPage extends State<MainPage> {
           }),
         ),
         Positioned(
-          left: MediaQuery.of(context).size.width * 0.472,
-          width: MediaQuery.of(context).size.width * 0.05,
+          left: MediaQuery.of(context).size.width * 0.46,
+          width: MediaQuery.of(context).size.width * 0.072,
           top: MediaQuery.of(context).size.height * 0.291,
           height: MediaQuery.of(context).size.height * 0.018,
           child: Center(
