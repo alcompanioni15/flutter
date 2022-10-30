@@ -5,6 +5,7 @@
 // *********************************************************************************
 
 import 'package:flutter/material.dart';
+import 'package:kadeca/widgets/home_page/custom/state_normal_custom.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
 class StateNormal extends StatefulWidget {
@@ -26,7 +27,8 @@ class _StateNormal extends State<StateNormal> {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(),
-        child: Stack(children: [
+        child: StateNormalCustom(
+            child: Stack(children: [
           Positioned(
             left: 0,
             width: widget.constraints.maxWidth * 1.0,
@@ -48,7 +50,7 @@ class _StateNormal extends State<StateNormal> {
                       textAlign: TextAlign.center,
                     ))),
           ),
-        ]));
+        ])));
   }
 
   @override
