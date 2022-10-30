@@ -68,10 +68,10 @@ class _Navbar extends State<Navbar> {
                     decoration: BoxDecoration(),
                     child: Stack(children: [
                       Positioned(
-                        left: 0,
                         right: 0,
+                        width: 343.0,
                         top: 0,
-                        bottom: 0,
+                        height: 40.0,
                         child: Container(
                           height: 40.0,
                           width: 343.0,
@@ -81,10 +81,10 @@ class _Navbar extends State<Navbar> {
                         ),
                       ),
                       Positioned(
-                        left: 264.0,
                         right: 2.0,
+                        width: 77.0,
                         top: 11.0,
-                        bottom: 11.0,
+                        height: 18.0,
                         child: AboutCustom(
                             child: AutoSizeText(
                           'About',
@@ -99,10 +99,10 @@ class _Navbar extends State<Navbar> {
                         )),
                       ),
                       Positioned(
-                        left: 132.0,
                         right: 134.0,
+                        width: 77.0,
                         top: 11.0,
-                        bottom: 11.0,
+                        height: 18.0,
                         child: ContactCustom(
                             child: AutoSizeText(
                           'Contact',
@@ -117,10 +117,10 @@ class _Navbar extends State<Navbar> {
                         )),
                       ),
                       Positioned(
-                        left: 0,
                         right: 266.0,
+                        width: 77.0,
                         top: 11.0,
-                        bottom: 11.0,
+                        height: 18.0,
                         child: HomeCustom(
                             child: AutoSizeText(
                           'Home',
