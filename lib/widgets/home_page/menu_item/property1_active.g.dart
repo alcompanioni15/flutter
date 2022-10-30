@@ -37,8 +37,8 @@ class _Property1Active extends State<Property1Active> {
             height: widget.constraints.maxHeight * 1.0,
             child: Stack(children: [
               Positioned(
-                left: widget.constraints.maxWidth * 0.094,
-                width: widget.constraints.maxWidth * 0.811,
+                left: 0,
+                width: widget.constraints.maxWidth * 1.0,
                 top: 0,
                 height: widget.constraints.maxHeight * 1.0,
                 child: Center(
@@ -58,7 +58,7 @@ class _Property1Active extends State<Property1Active> {
                         ))),
               ),
               Positioned(
-                left: 5.0,
+                left: 0,
                 width: 43.0,
                 top: 17.0,
                 height: 1.0,
