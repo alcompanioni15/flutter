@@ -6,6 +6,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:kadeca/widgets/home_page/custom/menu_item_custom.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kadeca/widgets/home_page/menu_item/state_active.g.dart';
 import 'package:kadeca/widgets/home_page/menu_item/state_normal.g.dart';
@@ -13,12 +14,10 @@ import 'package:kadeca/widgets/home_page/menu_item/state_normal.g.dart';
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
   final String? ovrKadeca;
-  final Widget? ovrMenuItem;
   const Navbar(
     this.constraints, {
     Key? key,
     this.ovrKadeca,
-    this.ovrMenuItem,
   }) : super(key: key);
   @override
   _Navbar createState() => _Navbar();
@@ -75,7 +74,7 @@ class _Navbar extends State<Navbar> {
                             width: 80.0,
                             top: 12.0,
                             height: 18.0,
-                            child:
+                            child: MenuItemCustom(child:
                                 LayoutBuilder(builder: (context, constraints) {
                               return StateActive(
                                 constraints,
@@ -88,33 +87,33 @@ class _Navbar extends State<Navbar> {
                                   fit: BoxFit.none,
                                 ),
                               );
-                            }),
+                            })),
                           ),
                           Positioned(
                             left: 174.0,
                             right: 174.0,
                             top: 12.0,
                             height: 18.0,
-                            child:
+                            child: MenuItemCustom(child:
                                 LayoutBuilder(builder: (context, constraints) {
                               return StateNormal(
                                 constraints,
                                 ovrHome: 'Contact',
                               );
-                            }),
+                            })),
                           ),
                           Positioned(
                             left: 319.0,
                             right: 29.0,
                             top: 12.0,
                             height: 18.0,
-                            child:
+                            child: MenuItemCustom(child:
                                 LayoutBuilder(builder: (context, constraints) {
                               return StateNormal(
                                 constraints,
                                 ovrHome: 'About',
                               );
-                            }),
+                            })),
                           ),
                         ]))),
               ),
