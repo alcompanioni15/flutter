@@ -6,6 +6,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:kadeca/widgets/home_page/custom/menu_navbar_custom.dart';
 import 'package:kadeca/widgets/home_page/custom/menu_item_custom.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kadeca/widgets/home_page/menu_item/state_active.g.dart';
@@ -67,55 +68,59 @@ class _Navbar extends State<Navbar> {
                 height: widget.constraints.maxHeight * 0.75,
                 child: Center(
                     child: Container(
-                        decoration: BoxDecoration(),
-                        child: Stack(children: [
-                          Positioned(
-                            left: 29.0,
-                            width: 80.0,
-                            top: 12.0,
-                            height: 18.0,
-                            child: MenuItemCustom(child:
-                                LayoutBuilder(builder: (context, constraints) {
-                              return StateActive(
-                                constraints,
-                                ovrHome: 'Home',
-                                ovrLine1: SvgPicture.asset(
-                                  'assets/images/line1.svg',
-                                  package: 'kadeca',
-                                  height: 1.0,
-                                  width: 43.0,
-                                  fit: BoxFit.none,
-                                ),
-                              );
-                            })),
-                          ),
-                          Positioned(
-                            left: 174.0,
-                            right: 174.0,
-                            top: 12.0,
-                            height: 18.0,
-                            child: MenuItemCustom(child:
-                                LayoutBuilder(builder: (context, constraints) {
-                              return StateNormal(
-                                constraints,
-                                ovrHome: 'Contact',
-                              );
-                            })),
-                          ),
-                          Positioned(
-                            left: 319.0,
-                            right: 29.0,
-                            top: 12.0,
-                            height: 18.0,
-                            child: MenuItemCustom(child:
-                                LayoutBuilder(builder: (context, constraints) {
-                              return StateNormal(
-                                constraints,
-                                ovrHome: 'About',
-                              );
-                            })),
-                          ),
-                        ]))),
+                        height: 42.0,
+                        width: 428.0,
+                        child: MenuNavbarCustom(
+                            child: Container(
+                                decoration: BoxDecoration(),
+                                child: Stack(children: [
+                                  Positioned(
+                                    left: 29.0,
+                                    width: 80.0,
+                                    top: 12.0,
+                                    height: 18.0,
+                                    child: MenuItemCustom(child: LayoutBuilder(
+                                        builder: (context, constraints) {
+                                      return StateActive(
+                                        constraints,
+                                        ovrHome: 'Home',
+                                        ovrLine1: SvgPicture.asset(
+                                          'assets/images/line1.svg',
+                                          package: 'kadeca',
+                                          height: 1.0,
+                                          width: 43.0,
+                                          fit: BoxFit.none,
+                                        ),
+                                      );
+                                    })),
+                                  ),
+                                  Positioned(
+                                    left: 174.0,
+                                    right: 174.0,
+                                    top: 12.0,
+                                    height: 18.0,
+                                    child: MenuItemCustom(child: LayoutBuilder(
+                                        builder: (context, constraints) {
+                                      return StateNormal(
+                                        constraints,
+                                        ovrHome: 'Contact',
+                                      );
+                                    })),
+                                  ),
+                                  Positioned(
+                                    left: 319.0,
+                                    right: 29.0,
+                                    top: 12.0,
+                                    height: 18.0,
+                                    child: MenuItemCustom(child: LayoutBuilder(
+                                        builder: (context, constraints) {
+                                      return StateNormal(
+                                        constraints,
+                                        ovrHome: 'About',
+                                      );
+                                    })),
+                                  ),
+                                ]))))),
               ),
             ]),
           ),
