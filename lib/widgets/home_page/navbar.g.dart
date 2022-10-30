@@ -7,8 +7,8 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kadeca/widgets/home_page/menu_item/property1_active.g.dart';
-import 'package:kadeca/widgets/home_page/menu_item/property1_normal.g.dart';
+import 'package:kadeca/widgets/home_page/menu_item/state_active.g.dart';
+import 'package:kadeca/widgets/home_page/menu_item/state_normal.g.dart';
 
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
@@ -75,39 +75,39 @@ class _Navbar extends State<Navbar> {
                         decoration: BoxDecoration(),
                         child: Stack(children: [
                           Positioned(
-                            left: 295.5,
-                            width: 44.0,
+                            left: 284.0,
+                            width: 63.0,
                             top: 12.0,
                             height: 18.0,
                             child:
                                 LayoutBuilder(builder: (context, constraints) {
-                              return Property1Normal(
+                              return StateNormal(
                                 constraints,
                                 ovrHome: 'About',
                               );
                             }),
                           ),
                           Positioned(
-                            left: 167.5,
-                            width: 58.0,
+                            left: 155.0,
+                            width: 62.0,
                             top: 12.0,
                             height: 18.0,
                             child:
                                 LayoutBuilder(builder: (context, constraints) {
-                              return Property1Normal(
+                              return StateNormal(
                                 constraints,
                                 ovrHome: 'Contact',
                               );
                             }),
                           ),
                           Positioned(
-                            left: 71.5,
+                            left: 44.0,
                             width: 43.0,
                             top: 12.0,
                             height: 18.0,
                             child:
                                 LayoutBuilder(builder: (context, constraints) {
-                              return Property1Active(
+                              return StateActive(
                                 constraints,
                                 ovrHome: 'Home',
                                 ovrLine1: SvgPicture.asset(
@@ -115,7 +115,7 @@ class _Navbar extends State<Navbar> {
                                   package: 'kadeca',
                                   height: 1.0,
                                   width: 43.0,
-                                  fit: BoxFit.fitHeight,
+                                  fit: BoxFit.none,
                                 ),
                               );
                             }),
