@@ -13,12 +13,16 @@ import 'package:kadeca/widgets/home_page/menu_item/property1_normal.g.dart';
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
   final String? ovrKadeca;
-  final Widget? ovrMenuItem;
+  final Widget? ovrHome;
+  final Widget? ovrContact;
+  final Widget? ovrAbout;
   const Navbar(
     this.constraints, {
     Key? key,
     this.ovrKadeca,
-    this.ovrMenuItem,
+    this.ovrHome,
+    this.ovrContact,
+    this.ovrAbout,
   }) : super(key: key);
   @override
   _Navbar createState() => _Navbar();
@@ -62,8 +66,8 @@ class _Navbar extends State<Navbar> {
                         ))),
               ),
               Positioned(
-                left: 569.0,
                 right: 27.0,
+                width: 428.0,
                 top: widget.constraints.maxHeight * 0.125,
                 height: widget.constraints.maxHeight * 0.75,
                 child: Center(
@@ -71,32 +75,21 @@ class _Navbar extends State<Navbar> {
                         decoration: BoxDecoration(),
                         child: Stack(children: [
                           Positioned(
-                            left: widget.constraints.maxWidth * 0.054,
-                            width: widget.constraints.maxWidth * 0.053,
+                            left: 295.5,
+                            width: 44.0,
                             top: 12.0,
                             height: 18.0,
-                            child: Center(
-                                child: Container(
-                                    height: 18.0,
-                                    width: 53.0,
-                                    child: LayoutBuilder(
-                                        builder: (context, constraints) {
-                                      return Property1Active(
-                                        constraints,
-                                        ovrHome: 'Home',
-                                        ovrLine1: SvgPicture.asset(
-                                          'assets/images/line1.svg',
-                                          package: 'kadeca',
-                                          height: 1.0,
-                                          width: 43.0,
-                                          fit: BoxFit.fitHeight,
-                                        ),
-                                      );
-                                    }))),
+                            child:
+                                LayoutBuilder(builder: (context, constraints) {
+                              return Property1Normal(
+                                constraints,
+                                ovrHome: 'About',
+                              );
+                            }),
                           ),
                           Positioned(
                             left: 167.5,
-                            width: 68.0,
+                            width: 58.0,
                             top: 12.0,
                             height: 18.0,
                             child:
@@ -108,15 +101,22 @@ class _Navbar extends State<Navbar> {
                             }),
                           ),
                           Positioned(
-                            left: 295.5,
-                            width: 54.0,
+                            left: 71.5,
+                            width: 43.0,
                             top: 12.0,
                             height: 18.0,
                             child:
                                 LayoutBuilder(builder: (context, constraints) {
-                              return Property1Normal(
+                              return Property1Active(
                                 constraints,
-                                ovrHome: 'About',
+                                ovrHome: 'Home',
+                                ovrLine1: SvgPicture.asset(
+                                  'assets/images/line1.svg',
+                                  package: 'kadeca',
+                                  height: 1.0,
+                                  width: 43.0,
+                                  fit: BoxFit.fitHeight,
+                                ),
                               );
                             }),
                           ),

@@ -28,8 +28,8 @@ class _Property1Normal extends State<Property1Normal> {
         decoration: BoxDecoration(),
         child: Stack(children: [
           Positioned(
-            left: widget.constraints.maxWidth * 0.094,
-            width: widget.constraints.maxWidth * 0.811,
+            left: 0,
+            width: widget.constraints.maxWidth * 1.0,
             top: 0,
             height: widget.constraints.maxHeight * 1.0,
             child: Center(
