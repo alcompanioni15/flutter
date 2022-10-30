@@ -6,8 +6,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:kadeca/widgets/home_page/custom/home_custom.dart';
+import 'package:kadeca/widgets/home_page/custom/about_custom.dart';
 import 'package:kadeca/widgets/home_page/custom/contact_custom.dart';
+import 'package:kadeca/widgets/home_page/custom/home_custom.dart';
 
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
@@ -59,40 +60,81 @@ class _Navbar extends State<Navbar> {
                         ))),
               ),
               Positioned(
-                right: 339.0,
-                width: 41.0,
-                top: 19.0,
-                bottom: 19.0,
-                child: HomeCustom(
-                    child: AutoSizeText(
-                  'Home',
-                  style: TextStyle(
-                    fontFamily: 'Roboto',
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 0,
-                    color: Colors.black,
-                  ),
-                  textAlign: TextAlign.left,
-                )),
-              ),
-              Positioned(
-                right: 249.0,
-                width: 53.0,
-                top: 19.0,
-                bottom: 19.0,
-                child: ContactCustom(
-                    child: AutoSizeText(
-                  'Contact',
-                  style: TextStyle(
-                    fontFamily: 'Roboto',
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 0,
-                    color: Colors.black,
-                  ),
-                  textAlign: TextAlign.left,
-                )),
+                left: 1043.0,
+                width: 343.0,
+                top: 8.0,
+                height: 40.0,
+                child: Container(
+                    decoration: BoxDecoration(),
+                    child: Stack(children: [
+                      Positioned(
+                        left: 0,
+                        right: 0,
+                        top: 0,
+                        bottom: 0,
+                        child: Container(
+                          height: 40.0,
+                          width: 343.0,
+                          decoration: BoxDecoration(
+                            color: Color(0x00d9d9d9),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 264.0,
+                        right: 2.0,
+                        top: 11.0,
+                        bottom: 11.0,
+                        child: AboutCustom(
+                            child: AutoSizeText(
+                          'About',
+                          style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                            letterSpacing: 0,
+                            color: Colors.black,
+                          ),
+                          textAlign: TextAlign.left,
+                        )),
+                      ),
+                      Positioned(
+                        left: 132.0,
+                        right: 134.0,
+                        top: 11.0,
+                        bottom: 11.0,
+                        child: ContactCustom(
+                            child: AutoSizeText(
+                          'Contact',
+                          style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                            letterSpacing: 0,
+                            color: Colors.black,
+                          ),
+                          textAlign: TextAlign.left,
+                        )),
+                      ),
+                      Positioned(
+                        left: 0,
+                        right: 266.0,
+                        top: 11.0,
+                        bottom: 11.0,
+                        child: HomeCustom(
+                            child: AutoSizeText(
+                          'Home',
+                          style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                            letterSpacing: 0,
+                            color: Colors.black,
+                          ),
+                          textAlign: TextAlign.left,
+                        )),
+                      ),
+                    ])),
               ),
             ]),
           ),
