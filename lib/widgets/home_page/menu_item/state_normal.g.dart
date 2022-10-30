@@ -28,14 +28,14 @@ class _StateNormal extends State<StateNormal> {
         decoration: BoxDecoration(),
         child: Stack(children: [
           Positioned(
-            left: widget.constraints.maxWidth * 0.237,
-            width: widget.constraints.maxWidth * 0.537,
+            left: 0,
+            width: widget.constraints.maxWidth * 1.0,
             top: 0,
             height: widget.constraints.maxHeight * 1.0,
             child: Center(
                 child: Container(
                     height: 18.0,
-                    width: 43.0,
+                    width: 80.0,
                     child: AutoSizeText(
                       widget.ovrHome ?? 'Home',
                       style: TextStyle(
