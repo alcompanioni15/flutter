@@ -47,7 +47,7 @@ class _MainPage extends State<MainPage> {
         ),
         Positioned(
           left: 0,
-          width: 1000.0,
+          right: 0,
           top: 0,
           height: 56.0,
           child: LayoutBuilder(builder: (context, constraints) {

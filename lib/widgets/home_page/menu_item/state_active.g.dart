@@ -5,7 +5,6 @@
 // *********************************************************************************
 
 import 'package:flutter/material.dart';
-import 'package:kadeca/widgets/home_page/custom/state_active_custom.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -30,8 +29,7 @@ class _StateActive extends State<StateActive> {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(),
-        child: StateActiveCustom(
-            child: Stack(children: [
+        child: Stack(children: [
           Positioned(
             left: 0,
             width: widget.constraints.maxWidth * 1.0,
@@ -75,7 +73,7 @@ class _StateActive extends State<StateActive> {
               ),
             ]),
           ),
-        ])));
+        ]));
   }
 
   @override
