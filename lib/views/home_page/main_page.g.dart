@@ -25,18 +25,6 @@ class _MainPage extends State<MainPage> {
       color: Colors.white,
       child: Stack(children: [
         Positioned(
-          left: 0,
-          right: 0,
-          top: 0,
-          height: 56.0,
-          child: LayoutBuilder(builder: (context, constraints) {
-            return Navbar(
-              constraints,
-              ovrKadeca: 'Kadeca',
-            );
-          }),
-        ),
-        Positioned(
           left: MediaQuery.of(context).size.width * 0.46,
           width: MediaQuery.of(context).size.width * 0.072,
           top: MediaQuery.of(context).size.height * 0.291,
@@ -56,6 +44,18 @@ class _MainPage extends State<MainPage> {
                     ),
                     textAlign: TextAlign.left,
                   ))),
+        ),
+        Positioned(
+          left: 0,
+          width: 1000.0,
+          top: 0,
+          height: 56.0,
+          child: LayoutBuilder(builder: (context, constraints) {
+            return Navbar(
+              constraints,
+              ovrKadeca: 'Kadeca',
+            );
+          }),
         ),
       ]),
     );
