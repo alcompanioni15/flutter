@@ -5,24 +5,24 @@
 // *********************************************************************************
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kadeca/widgets/home_page/menu_item/state_active.g.dart';
 import 'package:kadeca/widgets/home_page/menu_item/state_normal.g.dart';
 
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
-  final String? ovrKadeca;
   final Widget? ovrHome;
   final Widget? ovrContact;
   final Widget? ovrAbout;
+  final String? ovrKadeca;
   const Navbar(
     this.constraints, {
     Key? key,
-    this.ovrKadeca,
     this.ovrHome,
     this.ovrContact,
     this.ovrAbout,
+    this.ovrKadeca,
   }) : super(key: key);
   @override
   _Navbar createState() => _Navbar();
@@ -40,7 +40,7 @@ class _Navbar extends State<Navbar> {
         child: Stack(children: [
           Positioned(
             right: 27.0,
-            width: 428.0,
+            width: 1357.0,
             top: widget.constraints.maxHeight * 0.125,
             height: widget.constraints.maxHeight * 0.75,
             child: Center(
@@ -58,6 +58,26 @@ class _Navbar extends State<Navbar> {
                             ovrHome: 'About',
                           );
                         }),
+                      ),
+                      Positioned(
+                        left: 0,
+                        width: 67.0,
+                        top: 9.0,
+                        height: 23.0,
+                        child: Container(
+                            height: 23.0,
+                            width: 67.0,
+                            child: AutoSizeText(
+                              widget.ovrKadeca ?? 'Kadeca',
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 0,
+                                color: Colors.black,
+                              ),
+                              textAlign: TextAlign.left,
+                            )),
                       ),
                       Positioned(
                         left: 1103.0,
@@ -89,26 +109,6 @@ class _Navbar extends State<Navbar> {
                             ),
                           );
                         }),
-                      ),
-                      Positioned(
-                        left: 0,
-                        width: 67.0,
-                        top: 9.0,
-                        height: 23.0,
-                        child: Container(
-                            height: 23.0,
-                            width: 67.0,
-                            child: AutoSizeText(
-                              widget.ovrKadeca ?? 'Kadeca',
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600,
-                                letterSpacing: 0,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.left,
-                            )),
                       ),
                     ]))),
           ),
