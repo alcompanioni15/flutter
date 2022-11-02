@@ -5,20 +5,17 @@
 // *********************************************************************************
 
 import 'package:flutter/material.dart';
+import 'package:kadeca/widgets/home_page/custom/about_custom.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:kadeca/widgets/home_page/custom/contact_custom.dart';
+import 'package:kadeca/widgets/home_page/custom/menu_custom.dart';
 
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
-  final String? ovrAbout;
-  final String? ovrContact;
-  final String? ovrMenu;
   final String? ovrKadeca;
   const Navbar(
     this.constraints, {
     Key? key,
-    this.ovrAbout,
-    this.ovrContact,
-    this.ovrMenu,
     this.ovrKadeca,
   }) : super(key: key);
   @override
@@ -36,8 +33,8 @@ class _Navbar extends State<Navbar> {
         ),
         child: Stack(children: [
           Positioned(
-            right: 27.0,
-            width: 1357.0,
+            right: 17.0,
+            width: 966.0,
             top: widget.constraints.maxHeight * 0.125,
             height: widget.constraints.maxHeight * 0.75,
             child: Center(
@@ -45,29 +42,27 @@ class _Navbar extends State<Navbar> {
                     decoration: BoxDecoration(),
                     child: Stack(children: [
                       Positioned(
-                        left: 1022.0,
-                        width: 41.0,
+                        left: 831.0,
+                        width: 44.0,
                         top: 12.0,
                         height: 19.0,
-                        child: Container(
-                            height: 19.0,
-                            width: 41.0,
+                        child: AboutCustom(
                             child: AutoSizeText(
-                              widget.ovrMenu ?? 'Menu',
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                letterSpacing: 0,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.left,
-                            )),
+                          'About',
+                          style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            letterSpacing: 0,
+                            color: Colors.black,
+                          ),
+                          textAlign: TextAlign.left,
+                        )),
                       ),
                       Positioned(
                         left: 0,
                         width: 67.0,
-                        top: 9.0,
+                        top: 9.5,
                         height: 23.0,
                         child: Container(
                             height: 23.0,
@@ -85,44 +80,40 @@ class _Navbar extends State<Navbar> {
                             )),
                       ),
                       Positioned(
-                        left: 1122.0,
+                        left: 731.0,
                         width: 57.0,
                         top: 12.0,
                         height: 19.0,
-                        child: Container(
-                            height: 19.0,
-                            width: 57.0,
+                        child: ContactCustom(
                             child: AutoSizeText(
-                              widget.ovrContact ?? 'Contact',
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                letterSpacing: 0,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.left,
-                            )),
+                          'Contact',
+                          style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            letterSpacing: 0,
+                            color: Colors.black,
+                          ),
+                          textAlign: TextAlign.left,
+                        )),
                       ),
                       Positioned(
-                        left: 1222.0,
-                        width: 44.0,
+                        left: 631.0,
+                        width: 41.0,
                         top: 12.0,
                         height: 19.0,
-                        child: Container(
-                            height: 19.0,
-                            width: 44.0,
+                        child: MenuCustom(
                             child: AutoSizeText(
-                              widget.ovrAbout ?? 'About',
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                letterSpacing: 0,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.left,
-                            )),
+                          'Menu',
+                          style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            letterSpacing: 0,
+                            color: Colors.black,
+                          ),
+                          textAlign: TextAlign.left,
+                        )),
                       ),
                     ]))),
           ),

@@ -47,15 +47,12 @@ class _MainPage extends State<MainPage> {
         ),
         Positioned(
           left: 0,
-          right: 0,
+          width: 1000.0,
           top: 0,
           height: 56.0,
           child: LayoutBuilder(builder: (context, constraints) {
             return Navbar(
               constraints,
-              ovrAbout: 'About',
-              ovrContact: 'Contact',
-              ovrMenu: 'Menu',
               ovrKadeca: 'Kadeca',
             );
           }),
