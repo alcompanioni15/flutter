@@ -6,22 +6,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kadeca/widgets/home_page/menu_item/state_active.g.dart';
-import 'package:kadeca/widgets/home_page/menu_item/state_normal.g.dart';
 
 class Navbar extends StatefulWidget {
   final BoxConstraints constraints;
-  final Widget? ovrHome;
-  final Widget? ovrContact;
-  final Widget? ovrAbout;
+  final String? ovrAbout;
+  final String? ovrContact;
+  final String? ovrMenu;
   final String? ovrKadeca;
   const Navbar(
     this.constraints, {
     Key? key,
-    this.ovrHome,
-    this.ovrContact,
     this.ovrAbout,
+    this.ovrContact,
+    this.ovrMenu,
     this.ovrKadeca,
   }) : super(key: key);
   @override
@@ -48,16 +45,24 @@ class _Navbar extends State<Navbar> {
                     decoration: BoxDecoration(),
                     child: Stack(children: [
                       Positioned(
-                        left: 1248.0,
-                        right: 29.0,
+                        left: 1022.0,
+                        width: 41.0,
                         top: 12.0,
-                        height: 18.0,
-                        child: LayoutBuilder(builder: (context, constraints) {
-                          return StateNormal(
-                            constraints,
-                            ovrHome: 'About',
-                          );
-                        }),
+                        height: 19.0,
+                        child: Container(
+                            height: 19.0,
+                            width: 41.0,
+                            child: AutoSizeText(
+                              widget.ovrMenu ?? 'Menu',
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 0,
+                                color: Colors.black,
+                              ),
+                              textAlign: TextAlign.left,
+                            )),
                       ),
                       Positioned(
                         left: 0,
@@ -80,35 +85,44 @@ class _Navbar extends State<Navbar> {
                             )),
                       ),
                       Positioned(
-                        left: 1103.0,
-                        right: 174.0,
+                        left: 1122.0,
+                        width: 57.0,
                         top: 12.0,
-                        height: 18.0,
-                        child: LayoutBuilder(builder: (context, constraints) {
-                          return StateNormal(
-                            constraints,
-                            ovrHome: 'Contact',
-                          );
-                        }),
+                        height: 19.0,
+                        child: Container(
+                            height: 19.0,
+                            width: 57.0,
+                            child: AutoSizeText(
+                              widget.ovrContact ?? 'Contact',
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 0,
+                                color: Colors.black,
+                              ),
+                              textAlign: TextAlign.left,
+                            )),
                       ),
                       Positioned(
-                        left: 958.0,
-                        width: 80.0,
+                        left: 1222.0,
+                        width: 44.0,
                         top: 12.0,
-                        height: 18.0,
-                        child: LayoutBuilder(builder: (context, constraints) {
-                          return StateActive(
-                            constraints,
-                            ovrHome: 'Home',
-                            ovrLine1: SvgPicture.asset(
-                              'assets/images/line1.svg',
-                              package: 'kadeca',
-                              height: 1.0,
-                              width: 43.0,
-                              fit: BoxFit.none,
-                            ),
-                          );
-                        }),
+                        height: 19.0,
+                        child: Container(
+                            height: 19.0,
+                            width: 44.0,
+                            child: AutoSizeText(
+                              widget.ovrAbout ?? 'About',
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 0,
+                                color: Colors.black,
+                              ),
+                              textAlign: TextAlign.left,
+                            )),
                       ),
                     ]))),
           ),

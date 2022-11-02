@@ -25,18 +25,6 @@ class _ContactPage extends State<ContactPage> {
       color: Colors.white,
       child: Stack(children: [
         Positioned(
-          left: 0,
-          right: 0,
-          top: 0,
-          height: 55.0,
-          child: LayoutBuilder(builder: (context, constraints) {
-            return Navbar(
-              constraints,
-              ovrKadeca: 'Kadeca',
-            );
-          }),
-        ),
-        Positioned(
           left: MediaQuery.of(context).size.width * 0.454,
           width: MediaQuery.of(context).size.width * 0.091,
           top: MediaQuery.of(context).size.height * 0.291,
@@ -56,6 +44,21 @@ class _ContactPage extends State<ContactPage> {
                     ),
                     textAlign: TextAlign.left,
                   ))),
+        ),
+        Positioned(
+          left: 0,
+          right: 0,
+          top: 0,
+          height: 56.0,
+          child: LayoutBuilder(builder: (context, constraints) {
+            return Navbar(
+              constraints,
+              ovrAbout: 'About',
+              ovrContact: 'Contact',
+              ovrMenu: 'Menu',
+              ovrKadeca: 'Kadeca',
+            );
+          }),
         ),
       ]),
     );
