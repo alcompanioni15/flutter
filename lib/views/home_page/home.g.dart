@@ -6,23 +6,22 @@
 
 import 'package:flutter/material.dart';
 
-class Navbar extends StatefulWidget {
-  final BoxConstraints constraints;
-
-  const Navbar(
-    this.constraints, {
+class Home extends StatefulWidget {
+  const Home({
     Key? key,
   }) : super(key: key);
   @override
-  _Navbar createState() => _Navbar();
+  _Home createState() => _Home();
 }
 
-class _Navbar extends State<Navbar> {
-  _Navbar();
+class _Home extends State<Home> {
+  _Home();
 
   @override
   Widget build(BuildContext context) {
-    return;
+    return Material(
+      color: Color(0xffe6e6e6),
+    );
   }
 
   @override
