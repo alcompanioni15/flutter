@@ -6,22 +6,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class Topbar extends StatefulWidget {
   final BoxConstraints constraints;
   final String? ovrKadeca;
-  final String? ovrLogin;
-  final String? ovrAbout;
-  final Widget? ovrLine1;
-  final String? ovrHome;
+  final Widget? ovrAbout;
+  final Widget? ovrContact;
+  final Widget? ovrHome;
   const Topbar(
     this.constraints, {
     Key? key,
     this.ovrKadeca,
-    this.ovrLogin,
     this.ovrAbout,
-    this.ovrLine1,
+    this.ovrContact,
     this.ovrHome,
   }) : super(key: key);
   @override
@@ -79,90 +76,47 @@ class _Topbar extends State<Topbar> {
                         ])),
               ),
               Positioned(
-                right: 30.0,
-                width: 299.0,
+                right: 61.0,
+                width: 275.0,
                 top: 18.0,
-                height: 25.0,
+                height: 24.0,
                 child: Container(
-                    padding: EdgeInsets.only(
-                      left: 16,
-                      right: 16,
-                      top: 0,
-                      bottom: 0,
-                    ),
+                    width: 275.0,
                     decoration: BoxDecoration(),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                              decoration: BoxDecoration(),
-                              child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Container(
-                                        height: 24.0,
-                                        width: 56.0,
-                                        child: AutoSizeText(
-                                          widget.ovrHome ?? 'Home',
-                                          style: TextStyle(
-                                            fontFamily: 'Inter',
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.w400,
-                                            letterSpacing: 0,
-                                            color: Colors.black,
-                                          ),
-                                          textAlign: TextAlign.left,
-                                        )),
-                                    Container(
-                                        height: 1.0,
-                                        width: 54.0,
-                                        child: widget.ovrLine1 ??
-                                            SvgPicture.asset(
-                                              'assets/images/line1.svg',
-                                              package: 'kadeca_poc',
-                                              height: 1.0,
-                                              width: 54.0,
-                                              fit: BoxFit.none,
-                                            )),
-                                  ])),
+                              height: 24.0,
+                              width: 56.0,
+                              child: LayoutBuilder(
+                                  builder: (context, constraints) {
+                                return Container(
+                                    /** This Symbol was not found **/);
+                              })),
                           SizedBox(
-                            width: 51,
+                            width: 50,
+                          ),
+                          Container(
+                              height: 24.0,
+                              width: 76.0,
+                              child: LayoutBuilder(
+                                  builder: (context, constraints) {
+                                return Container(
+                                    /** This Symbol was not found **/);
+                              })),
+                          SizedBox(
+                            width: 50,
                           ),
                           Container(
                               height: 24.0,
                               width: 57.0,
-                              child: AutoSizeText(
-                                widget.ovrAbout ?? 'About',
-                                style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w400,
-                                  letterSpacing: 0,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.left,
-                              )),
-                          SizedBox(
-                            width: 51,
-                          ),
-                          Container(
-                              height: 24.0,
-                              width: 52.0,
-                              child: AutoSizeText(
-                                widget.ovrLogin ?? 'Login',
-                                style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w400,
-                                  letterSpacing: 0,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.left,
-                              )),
+                              child: LayoutBuilder(
+                                  builder: (context, constraints) {
+                                return Container(
+                                    /** This Symbol was not found **/);
+                              })),
                         ])),
               ),
             ]),

@@ -5,19 +5,19 @@
 // *********************************************************************************
 
 import 'package:flutter/material.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:kadeca_poc/widgets/home_page/topbar.g.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
-class Home extends StatefulWidget {
-  const Home({
+class Contact extends StatefulWidget {
+  const Contact({
     Key? key,
   }) : super(key: key);
   @override
-  _Home createState() => _Home();
+  _Contact createState() => _Contact();
 }
 
-class _Home extends State<Home> {
-  _Home();
+class _Contact extends State<Contact> {
+  _Contact();
 
   @override
   Widget build(BuildContext context) {
@@ -37,16 +37,16 @@ class _Home extends State<Home> {
           }),
         ),
         Positioned(
-          left: MediaQuery.of(context).size.width * 0.462,
-          width: MediaQuery.of(context).size.width * 0.076,
+          left: MediaQuery.of(context).size.width * 0.456,
+          width: MediaQuery.of(context).size.width * 0.09,
           top: MediaQuery.of(context).size.height * 0.488,
           height: MediaQuery.of(context).size.height * 0.023,
           child: Center(
               child: Container(
                   height: 24.0,
-                  width: 110.0,
+                  width: 129.0,
                   child: AutoSizeText(
-                    'Home Page',
+                    'Contact Page',
                     style: TextStyle(
                       fontFamily: 'Inter',
                       fontSize: 20,
