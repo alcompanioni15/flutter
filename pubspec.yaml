@@ -2,15 +2,16 @@ name: kadeca_poc
 description: A new Flutter project.
 publish_to: none
 version: 1.0.0+1
-environment: 
+environment:
   sdk: '>=2.18.4 <3.0.0'
-dependencies: 
-  flutter: 
-    sdk: flutter
+dependencies:
+  auto_size_text: ^3.0.0
   cupertino_icons: ^1.0.2
-dev_dependencies: 
-  flutter_test: 
+  flutter:
     sdk: flutter
+dev_dependencies:
   flutter_lints: ^2.0.0
-flutter: 
+  flutter_test:
+    sdk: flutter
+flutter:
   uses-material-design: true

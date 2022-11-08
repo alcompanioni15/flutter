@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kadeca/views/home_page/home.g.dart';
+import 'package:kadeca_poc/views/home_page/home.g.dart';
 
 void main() {
   runApp(const MyApp());
