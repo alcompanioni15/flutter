@@ -5,6 +5,7 @@
 // *********************************************************************************
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kadeca_poc/widgets/home_page/topbar.g.dart';
 
 class Home extends StatefulWidget {
@@ -34,6 +35,13 @@ class _Home extends State<Home> {
               ovrKadeca: 'Kadeca',
               ovrLogin: 'Login',
               ovrAbout: 'About',
+              ovrLine1: SvgPicture.asset(
+                'assets/images/line1.svg',
+                package: 'kadeca_poc',
+                height: 1.0,
+                width: 54.0,
+                fit: BoxFit.none,
+              ),
               ovrHome: 'Home',
             );
           }),
