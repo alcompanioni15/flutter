@@ -10,12 +10,12 @@ import 'package:auto_size_text/auto_size_text.dart';
 class Topbar extends StatefulWidget {
   final BoxConstraints constraints;
   final String? ovrKadeca;
-  final Widget? ovrHome;
+  final String? ovrItem;
   const Topbar(
     this.constraints, {
     Key? key,
     this.ovrKadeca,
-    this.ovrHome,
+    this.ovrItem,
   }) : super(key: key);
   @override
   _Topbar createState() => _Topbar();
@@ -72,23 +72,24 @@ class _Topbar extends State<Topbar> {
                         ])),
               ),
               Positioned(
-                left: 1017.0,
-                width: 56.0,
+                right: 211.0,
+                width: 42.0,
                 top: 18.0,
                 height: 24.0,
                 child: Container(
-                    decoration: BoxDecoration(),
-                    child: Stack(children: [
-                      Positioned(
-                        left: 0,
-                        width: 56.0,
-                        top: 0,
-                        height: 24.0,
-                        child: LayoutBuilder(builder: (context, constraints) {
-                          return Container(/** This Symbol was not found **/);
-                        }),
+                    height: 24.0,
+                    width: 42.0,
+                    child: AutoSizeText(
+                      widget.ovrItem ?? 'Item',
+                      style: TextStyle(
+                        fontFamily: 'Inter',
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                        letterSpacing: 0,
+                        color: Colors.black,
                       ),
-                    ])),
+                      textAlign: TextAlign.left,
+                    )),
               ),
             ]),
           ),
