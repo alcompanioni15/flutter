@@ -6,16 +6,21 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:kadeca_poc/widgets/home_page/menuitems/state_inactive.g.dart';
 
 class Topbar extends StatefulWidget {
   final BoxConstraints constraints;
   final String? ovrKadeca;
-  final String? ovrItem;
+  final Widget? ovrAbout;
+  final Widget? ovrContact;
+  final Widget? ovrHome;
   const Topbar(
     this.constraints, {
     Key? key,
     this.ovrKadeca,
-    this.ovrItem,
+    this.ovrAbout,
+    this.ovrContact,
+    this.ovrHome,
   }) : super(key: key);
   @override
   _Topbar createState() => _Topbar();
@@ -72,24 +77,54 @@ class _Topbar extends State<Topbar> {
                         ])),
               ),
               Positioned(
-                right: 211.0,
-                width: 42.0,
+                right: 78.0,
+                width: 317.0,
                 top: 18.0,
                 height: 24.0,
                 child: Container(
-                    height: 24.0,
-                    width: 42.0,
-                    child: AutoSizeText(
-                      widget.ovrItem ?? 'Item',
-                      style: TextStyle(
-                        fontFamily: 'Inter',
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: 0,
-                        color: Colors.black,
-                      ),
-                      textAlign: TextAlign.left,
-                    )),
+                    decoration: BoxDecoration(),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Container(
+                              height: 24.0,
+                              width: 56.0,
+                              child: LayoutBuilder(
+                                  builder: (context, constraints) {
+                                return StateInactive(
+                                  constraints,
+                                  ovrHome: 'Home',
+                                );
+                              })),
+                          SizedBox(
+                            width: 65,
+                          ),
+                          Container(
+                              height: 24.0,
+                              width: 75.0,
+                              child: LayoutBuilder(
+                                  builder: (context, constraints) {
+                                return StateInactive(
+                                  constraints,
+                                  ovrHome: 'Contact',
+                                );
+                              })),
+                          SizedBox(
+                            width: 65,
+                          ),
+                          Container(
+                              height: 24.0,
+                              width: 56.0,
+                              child: LayoutBuilder(
+                                  builder: (context, constraints) {
+                                return StateInactive(
+                                  constraints,
+                                  ovrHome: 'About',
+                                );
+                              })),
+                        ])),
               ),
             ]),
           ),

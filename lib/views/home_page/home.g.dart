@@ -6,8 +6,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kadeca_poc/widgets/home_page/topbar.g.dart';
-import 'package:kadeca_poc/widgets/home_page/menuitems/state_inactive.g.dart';
+import 'package:kadeca_poc/widgets/home_page/menuitems/state_active.g.dart';
 
 class Home extends StatefulWidget {
   const Home({
@@ -34,7 +35,6 @@ class _Home extends State<Home> {
             return Topbar(
               constraints,
               ovrKadeca: 'Kadeca',
-              ovrItem: 'Item',
             );
           }),
         ),
@@ -61,13 +61,20 @@ class _Home extends State<Home> {
         ),
         Positioned(
           left: 213.0,
-          width: 68.0,
+          width: 61.0,
           top: 394.0,
           height: 24.0,
           child: LayoutBuilder(builder: (context, constraints) {
-            return StateInactive(
+            return StateActive(
               constraints,
               ovrHome: 'Home',
+              ovrLine1: SvgPicture.asset(
+                'assets/images/line1.svg',
+                package: 'kadeca_poc',
+                height: MediaQuery.of(context).size.height * 0.0009765625,
+                width: MediaQuery.of(context).size.width * 0.03958333333333333,
+                fit: BoxFit.fitHeight,
+              ),
             );
           }),
         ),

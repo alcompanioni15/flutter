@@ -33,7 +33,6 @@ class _About extends State<About> {
             return Topbar(
               constraints,
               ovrKadeca: 'Kadeca',
-              ovrItem: 'Item',
             );
           }),
         ),
