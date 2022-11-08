@@ -7,6 +7,7 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:kadeca_poc/widgets/home_page/topbar.g.dart';
+import 'package:kadeca_poc/widgets/home_page/menuitems/state_inactive.g.dart';
 
 class Home extends StatefulWidget {
   const Home({
@@ -59,21 +60,15 @@ class _Home extends State<Home> {
                   ))),
         ),
         Positioned(
-          left: 692.0,
-          width: 56.0,
-          top: 561.0,
+          left: 213.0,
+          width: 68.0,
+          top: 394.0,
           height: 24.0,
           child: LayoutBuilder(builder: (context, constraints) {
-            return Container(/** This Symbol was not found **/);
-          }),
-        ),
-        Positioned(
-          left: 690.0,
-          width: 56.0,
-          top: 628.0,
-          height: 24.0,
-          child: LayoutBuilder(builder: (context, constraints) {
-            return Container(/** This Symbol was not found **/);
+            return StateInactive(
+              constraints,
+              ovrHome: 'Home',
+            );
           }),
         ),
       ]),
