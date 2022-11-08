@@ -16,5 +16,5 @@ dev_dependencies:
     sdk: flutter
 flutter:
   assets:
-    - packages/kadeca_poc/assets
+    - packages/kadeca_poc/assets/images/line1.svg
   uses-material-design: true
