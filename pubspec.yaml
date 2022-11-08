@@ -9,9 +9,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_svg: ^1.1.6
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
 flutter:
+  assets:
+    - packages/kadeca_poc/assets
   uses-material-design: true
