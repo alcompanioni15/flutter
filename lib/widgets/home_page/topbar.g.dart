@@ -10,15 +10,11 @@ import 'package:auto_size_text/auto_size_text.dart';
 class Topbar extends StatefulWidget {
   final BoxConstraints constraints;
   final String? ovrKadeca;
-  final Widget? ovrAbout;
-  final Widget? ovrContact;
   final Widget? ovrHome;
   const Topbar(
     this.constraints, {
     Key? key,
     this.ovrKadeca,
-    this.ovrAbout,
-    this.ovrContact,
     this.ovrHome,
   }) : super(key: key);
   @override
@@ -76,48 +72,23 @@ class _Topbar extends State<Topbar> {
                         ])),
               ),
               Positioned(
-                right: 45.0,
-                width: 289.0,
+                left: 1017.0,
+                width: 56.0,
                 top: 18.0,
                 height: 24.0,
                 child: Container(
                     decoration: BoxDecoration(),
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Container(
-                              height: 24.0,
-                              width: 56.0,
-                              child: LayoutBuilder(
-                                  builder: (context, constraints) {
-                                return Container(
-                                    /** This Symbol was not found **/);
-                              })),
-                          SizedBox(
-                            width: 50,
-                          ),
-                          Container(
-                              height: 24.0,
-                              width: 76.0,
-                              child: LayoutBuilder(
-                                  builder: (context, constraints) {
-                                return Container(
-                                    /** This Symbol was not found **/);
-                              })),
-                          SizedBox(
-                            width: 50,
-                          ),
-                          Container(
-                              height: 24.0,
-                              width: 57.0,
-                              child: LayoutBuilder(
-                                  builder: (context, constraints) {
-                                return Container(
-                                    /** This Symbol was not found **/);
-                              })),
-                        ])),
+                    child: Stack(children: [
+                      Positioned(
+                        left: 0,
+                        width: 56.0,
+                        top: 0,
+                        height: 24.0,
+                        child: LayoutBuilder(builder: (context, constraints) {
+                          return Container(/** This Symbol was not found **/);
+                        }),
+                      ),
+                    ])),
               ),
             ]),
           ),
