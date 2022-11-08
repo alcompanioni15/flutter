@@ -33,7 +33,6 @@ class _Contact extends State<Contact> {
             return Topbar(
               constraints,
               ovrKadeca: 'Kadeca',
-              ovrItem: 'Item',
             );
           }),
         ),

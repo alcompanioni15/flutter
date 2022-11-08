@@ -40,7 +40,7 @@ class _StateInactive extends State<StateInactive> {
                   style: TextStyle(
                     fontFamily: 'Inter',
                     fontSize: 20,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w300,
                     letterSpacing: 0,
                     color: Colors.black,
                   ),
