@@ -5,6 +5,7 @@
 // *********************************************************************************
 
 import 'package:flutter/material.dart';
+import 'package:kadeca_poc/widgets/home_page/topbar.g.dart';
 
 class Home extends StatefulWidget {
   const Home({
@@ -26,9 +27,12 @@ class _Home extends State<Home> {
           left: 0,
           width: 1440.0,
           top: 0,
-          height: 57.0,
+          height: 60.0,
           child: LayoutBuilder(builder: (context, constraints) {
-            return Container(/** This Symbol was not found **/);
+            return Topbar(
+              constraints,
+              ovrKadeca: 'Kadeca',
+            );
           }),
         ),
       ]),
