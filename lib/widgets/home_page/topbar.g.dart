@@ -76,16 +76,16 @@ class _Topbar extends State<Topbar> {
                         ])),
               ),
               Positioned(
-                right: 61.0,
-                width: 275.0,
+                right: 45.0,
+                width: 289.0,
                 top: 18.0,
                 height: 24.0,
                 child: Container(
-                    width: 275.0,
                     decoration: BoxDecoration(),
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           Container(
                               height: 24.0,
