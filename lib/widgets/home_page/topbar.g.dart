@@ -76,7 +76,7 @@ class _Topbar extends State<Topbar> {
                         ])),
               ),
               Positioned(
-                left: 1111.0,
+                right: 30.0,
                 width: 299.0,
                 top: 18.0,
                 height: 24.0,
