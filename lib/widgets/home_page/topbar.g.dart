@@ -83,8 +83,8 @@ class _Topbar extends State<Topbar> {
                 child: Container(
                     decoration: BoxDecoration(),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Container(
