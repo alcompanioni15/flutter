@@ -32,6 +32,9 @@ class _Home extends State<Home> {
             return Topbar(
               constraints,
               ovrKadeca: 'Kadeca',
+              ovrLogin: 'Login',
+              ovrAbout: 'About',
+              ovrHome: 'Home',
             );
           }),
         ),
