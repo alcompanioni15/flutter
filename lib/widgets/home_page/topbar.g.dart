@@ -6,12 +6,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Topbar extends StatefulWidget {
   final BoxConstraints constraints;
   final String? ovrKadeca;
   final String? ovrLogin;
   final String? ovrAbout;
+  final Widget? ovrLine1;
   final String? ovrHome;
   const Topbar(
     this.constraints, {
@@ -19,6 +21,7 @@ class Topbar extends StatefulWidget {
     this.ovrKadeca,
     this.ovrLogin,
     this.ovrAbout,
+    this.ovrLine1,
     this.ovrHome,
   }) : super(key: key);
   @override
@@ -79,7 +82,7 @@ class _Topbar extends State<Topbar> {
                 right: 30.0,
                 width: 299.0,
                 top: 18.0,
-                height: 24.0,
+                height: 25.0,
                 child: Container(
                     padding: EdgeInsets.only(
                       left: 16,
@@ -94,19 +97,38 @@ class _Topbar extends State<Topbar> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Container(
-                              height: 24.0,
-                              width: 56.0,
-                              child: AutoSizeText(
-                                widget.ovrHome ?? 'Home',
-                                style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w400,
-                                  letterSpacing: 0,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.left,
-                              )),
+                              decoration: BoxDecoration(),
+                              child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Container(
+                                        height: 24.0,
+                                        width: 56.0,
+                                        child: AutoSizeText(
+                                          widget.ovrHome ?? 'Home',
+                                          style: TextStyle(
+                                            fontFamily: 'Inter',
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w400,
+                                            letterSpacing: 0,
+                                            color: Colors.black,
+                                          ),
+                                          textAlign: TextAlign.left,
+                                        )),
+                                    Container(
+                                        height: 1.0,
+                                        width: 54.0,
+                                        child: widget.ovrLine1 ??
+                                            SvgPicture.asset(
+                                              'assets/images/line1.svg',
+                                              package: 'kadeca_poc',
+                                              height: 1.0,
+                                              width: 54.0,
+                                              fit: BoxFit.none,
+                                            )),
+                                  ])),
                           SizedBox(
                             width: 51,
                           ),
