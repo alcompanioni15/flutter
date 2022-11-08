@@ -26,7 +26,7 @@ class _Home extends State<Home> {
       child: Stack(children: [
         Positioned(
           left: 0,
-          width: 1440.0,
+          right: 0,
           top: 0,
           height: 60.0,
           child: LayoutBuilder(builder: (context, constraints) {
