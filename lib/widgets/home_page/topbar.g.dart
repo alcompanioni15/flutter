@@ -33,7 +33,7 @@ class _Topbar extends State<Topbar> {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-          color: Color(0xff6fd87a),
+          color: Color(0xff6fd8d8),
         ),
         child: Stack(children: [
           Positioned(
