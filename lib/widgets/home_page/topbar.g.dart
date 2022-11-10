@@ -6,21 +6,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:kadeca_poc/widgets/home_page/custom/home_custom.dart';
+import 'package:kadeca_poc/widgets/home_page/custom/contact_custom.dart';
+import 'package:kadeca_poc/widgets/home_page/custom/about_custom.dart';
 import 'package:kadeca_poc/widgets/home_page/menuitems/state_inactive.g.dart';
 
 class Topbar extends StatefulWidget {
   final BoxConstraints constraints;
   final String? ovrKadeca;
-  final Widget? ovrAbout;
-  final Widget? ovrContact;
-  final Widget? ovrHome;
   const Topbar(
     this.constraints, {
     Key? key,
     this.ovrKadeca,
-    this.ovrAbout,
-    this.ovrContact,
-    this.ovrHome,
   }) : super(key: key);
   @override
   _Topbar createState() => _Topbar();
@@ -91,39 +88,39 @@ class _Topbar extends State<Topbar> {
                           Container(
                               height: 24.0,
                               width: 56.0,
-                              child: LayoutBuilder(
+                              child: HomeCustom(child: LayoutBuilder(
                                   builder: (context, constraints) {
                                 return StateInactive(
                                   constraints,
                                   ovrHome: 'Home',
                                 );
-                              })),
+                              }))),
                           SizedBox(
                             width: 65,
                           ),
                           Container(
                               height: 24.0,
                               width: 75.0,
-                              child: LayoutBuilder(
+                              child: ContactCustom(child: LayoutBuilder(
                                   builder: (context, constraints) {
                                 return StateInactive(
                                   constraints,
                                   ovrHome: 'Contact',
                                 );
-                              })),
+                              }))),
                           SizedBox(
                             width: 65,
                           ),
                           Container(
                               height: 24.0,
                               width: 56.0,
-                              child: LayoutBuilder(
+                              child: AboutCustom(child: LayoutBuilder(
                                   builder: (context, constraints) {
                                 return StateInactive(
                                   constraints,
                                   ovrHome: 'About',
                                 );
-                              })),
+                              }))),
                         ])),
               ),
             ]),
