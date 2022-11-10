@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kadeca_poc/views/home_page/home.g.dart';
+import 'package:kadeca_poc/router/route_generator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Home(),
+      initialRoute: '/',
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
