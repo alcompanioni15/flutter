@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kadeca_poc/cubit/topbar_cubit.dart';
+import 'package:kadeca_poc/router/app_router.dart';
 import 'package:kadeca_poc/views/home_page/about.g.dart';
 import 'package:kadeca_poc/views/home_page/contact.g.dart';
 import 'package:kadeca_poc/views/home_page/home.g.dart';
@@ -15,14 +16,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: BlocProvider(
-        create: (context) => TopbarCubit(),
-        child: const InitialViewBuilder(),
+    return BlocProvider(
+      create: (context) => TopbarCubit(),
+      child: MaterialApp.router(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        routerConfig: AppRouter().router,
       ),
     );
   }
