@@ -37,13 +37,13 @@ class _StateActive extends State<StateActive> {
             height: widget.constraints.maxHeight * 1.0,
             child: Stack(children: [
               Positioned(
-                left: widget.constraints.maxWidth * 0.033,
-                width: widget.constraints.maxWidth * 0.934,
+                left: 0,
+                width: widget.constraints.maxWidth * 1.0,
                 top: 0,
                 height: widget.constraints.maxHeight * 1.0,
                 child: Container(
                     height: widget.constraints.maxHeight * 1.0,
-                    width: widget.constraints.maxWidth * 0.9344262295081968,
+                    width: widget.constraints.maxWidth * 1.0,
                     child: AutoSizeText(
                       widget.ovrHome ?? 'Home',
                       style: TextStyle(
@@ -57,8 +57,8 @@ class _StateActive extends State<StateActive> {
                     )),
               ),
               Positioned(
-                left: widget.constraints.maxWidth * 0.033,
-                width: widget.constraints.maxWidth * 0.934,
+                left: 0,
+                width: widget.constraints.maxWidth * 1.0,
                 top: widget.constraints.maxHeight * 0.958,
                 height: widget.constraints.maxHeight * 0.042,
                 child: widget.ovrLine1 ??
@@ -67,7 +67,7 @@ class _StateActive extends State<StateActive> {
                       package: 'kadeca_poc',
                       height:
                           widget.constraints.maxHeight * 0.041666666666666664,
-                      width: widget.constraints.maxWidth * 0.9344262295081968,
+                      width: widget.constraints.maxWidth * 1.0,
                       fit: BoxFit.fitHeight,
                     ),
               ),
