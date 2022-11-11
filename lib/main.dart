@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kadeca_poc/router/route_generator.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kadeca_poc/cubit/topbar_cubit.dart';
+import 'package:kadeca_poc/views/home_page/contact.g.dart';
+import 'package:kadeca_poc/views/home_page/home.g.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +19,30 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
-      onGenerateRoute: RouteGenerator.generateRoute,
+      home: BlocProvider(
+        create: (context) => TopbarCubit(),
+        child: const InitialViewBuilder(),
+      ),
     );
+  }
+}
+
+class InitialViewBuilder extends StatefulWidget {
+  const InitialViewBuilder({super.key});
+
+  @override
+  State<InitialViewBuilder> createState() => _InitialViewBuilderState();
+}
+
+class _InitialViewBuilderState extends State<InitialViewBuilder> {
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<TopbarCubit, TopbarState>(builder: (context, state) {
+      if (state is ContactSelected) {
+        return const Contact();
+      } else {
+        return const Home();
+      }
+    });
   }
 }
