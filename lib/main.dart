@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kadeca_poc/cubit/topbar_cubit.dart';
+import 'package:kadeca_poc/views/home_page/about.g.dart';
 import 'package:kadeca_poc/views/home_page/contact.g.dart';
 import 'package:kadeca_poc/views/home_page/home.g.dart';
 
@@ -40,6 +41,8 @@ class _InitialViewBuilderState extends State<InitialViewBuilder> {
     return BlocBuilder<TopbarCubit, TopbarState>(builder: (context, state) {
       if (state is ContactSelected) {
         return const Contact();
+      } else if (state is AboutSelected) {
+        return const About();
       } else {
         return const Home();
       }
