@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:kadeca_poc/cubit/topbar_cubit.dart';
 import 'package:kadeca_poc/widgets/home_page/menuitems/state_active.g.dart';
 
@@ -28,6 +29,7 @@ class _AboutCustomState extends State<AboutCustom> {
           onTap: () {
             TopbarCubit cubit = context.read<TopbarCubit>();
             cubit.changePage('About');
+            GoRouter.of(context).go('/about');
           },
           child: widget.child!);
     });
