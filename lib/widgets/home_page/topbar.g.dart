@@ -8,10 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:kadeca_poc/widgets/home_page/custom/home_custom.dart';
 import 'package:kadeca_poc/widgets/home_page/custom/contact_custom.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kadeca_poc/widgets/home_page/custom/about_custom.dart';
 import 'package:kadeca_poc/widgets/home_page/menuitems/state_inactive.g.dart';
-import 'package:kadeca_poc/widgets/home_page/menuitems/state_active.g.dart';
 
 class Topbar extends StatefulWidget {
   final BoxConstraints constraints;
@@ -77,7 +75,7 @@ class _Topbar extends State<Topbar> {
               ),
               Positioned(
                 right: 78.0,
-                width: 319.0,
+                width: 317.0,
                 top: 18.0,
                 height: 24.0,
                 child: Container(
@@ -102,21 +100,12 @@ class _Topbar extends State<Topbar> {
                           ),
                           Container(
                               height: 24.0,
-                              width: 77.0,
+                              width: 75.0,
                               child: ContactCustom(child: LayoutBuilder(
                                   builder: (context, constraints) {
-                                return StateActive(
+                                return StateInactive(
                                   constraints,
                                   ovrHome: 'Contact',
-                                  ovrLine1: SvgPicture.asset(
-                                    'assets/images/line1.svg',
-                                    package: 'kadeca_poc',
-                                    height: widget.constraints.maxHeight *
-                                        0.016666666666666666,
-                                    width: widget.constraints.maxWidth *
-                                        0.05347222222222222,
-                                    fit: BoxFit.fitHeight,
-                                  ),
                                 );
                               }))),
                           SizedBox(
