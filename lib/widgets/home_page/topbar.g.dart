@@ -40,7 +40,7 @@ class _Topbar extends State<Topbar> {
             height: widget.constraints.maxHeight * 1.0,
             child: Stack(children: [
               Positioned(
-                left: 30.0,
+                left: 94.0,
                 width: 91.0,
                 top: 8.0,
                 height: 44.0,
@@ -74,7 +74,7 @@ class _Topbar extends State<Topbar> {
                         ])),
               ),
               Positioned(
-                right: 78.0,
+                right: 103.0,
                 width: 317.0,
                 top: 18.0,
                 height: 24.0,

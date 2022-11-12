@@ -5,8 +5,8 @@
 // *********************************************************************************
 
 import 'package:flutter/material.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:kadeca_poc/widgets/home_page/topbar.g.dart';
+import 'package:kadeca_poc/widgets/home_page/product_card.g.dart';
 
 class Home extends StatefulWidget {
   const Home({
@@ -37,25 +37,26 @@ class _Home extends State<Home> {
           }),
         ),
         Positioned(
-          left: MediaQuery.of(context).size.width * 0.462,
-          width: MediaQuery.of(context).size.width * 0.076,
-          top: MediaQuery.of(context).size.height * 0.488,
-          height: MediaQuery.of(context).size.height * 0.023,
-          child: Center(
-              child: Container(
-                  height: 24.0,
-                  width: 110.0,
-                  child: AutoSizeText(
-                    'Home Page',
-                    style: TextStyle(
-                      fontFamily: 'Inter',
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
-                      letterSpacing: 0,
-                      color: Colors.black,
-                    ),
-                    textAlign: TextAlign.left,
-                  ))),
+          left: 104.0,
+          width: 292.0,
+          top: 109.0,
+          height: 122.0,
+          child: LayoutBuilder(builder: (context, constraints) {
+            return ProductCard(
+              constraints,
+              ovrPhoneNumber: '5385479652 ',
+              ovrFullName: 'Edwin Adenike',
+              ovrProfilePicture: Image.asset(
+                'assets/images/profilepicture.png',
+                package: 'kadeca_poc',
+                height: 62.0,
+                width: 62.0,
+                fit: BoxFit.none,
+              ),
+              ovrTitle:
+                  'Rumah Kota Wisata Cibubur Fully Furnished Rumah Cantik Siap Huni Luas 220 Hadap Barat Boulevard',
+            );
+          }),
         ),
       ]),
     );
