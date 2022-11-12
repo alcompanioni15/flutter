@@ -40,9 +40,9 @@ class _StateActive extends State<StateActive> {
                 left: 0,
                 width: widget.constraints.maxWidth * 1.0,
                 top: 0,
-                height: widget.constraints.maxHeight * 1.0,
+                height: widget.constraints.maxHeight * 0.96,
                 child: Container(
-                    height: widget.constraints.maxHeight * 1.0,
+                    height: widget.constraints.maxHeight * 0.96,
                     width: widget.constraints.maxWidth * 1.0,
                     child: AutoSizeText(
                       widget.ovrHome ?? 'Home',
@@ -59,14 +59,13 @@ class _StateActive extends State<StateActive> {
               Positioned(
                 left: 0,
                 width: widget.constraints.maxWidth * 1.0,
-                top: widget.constraints.maxHeight * 0.958,
-                height: widget.constraints.maxHeight * 0.042,
+                top: widget.constraints.maxHeight * 0.96,
+                height: widget.constraints.maxHeight * 0.04,
                 child: widget.ovrLine1 ??
                     SvgPicture.asset(
                       'assets/images/line1.svg',
                       package: 'kadeca_poc',
-                      height:
-                          widget.constraints.maxHeight * 0.041666666666666664,
+                      height: widget.constraints.maxHeight * 0.04,
                       width: widget.constraints.maxWidth * 1.0,
                       fit: BoxFit.fitHeight,
                     ),
